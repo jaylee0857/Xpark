@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/b27598cb45.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
     <link rel="stylesheet" href="../css/booking.css">
-    
+
     <title>booking</title>
 </head>
+
 <body>
     <section>
         <h1>購買票券</h1>
         <div class="container d-flex">
             <div class="content">
-              
+
                 <h2>一行程特色一</h2>
                 <div class="content_text">
                     由日本橫濱八景島首度來台開設分館 Xpark，
@@ -23,37 +28,94 @@
                     受到啟發、感受療癒、洗滌心靈。
                     在KKday訂購電子票即可掃QRcode入園，
                     不必排隊購票・輕鬆入場！
+                    <br>
+                    <br>
+                    <span><i class="fas fa-comment-dollar " style="padding-right: 10px;"></i>6天前可免費取消</span>
+                    <br>
+                    <br>
+                    <span><i class="fas fa-mobile-alt" style="padding-right: 10px;"></i>現場請出示 QR code</span>
                 </div>
             </div>
-        <div class="pfmitem">
-            <div class="pfmcontainer">
-                <h3 class="tab">
-                    <i class="fas fa-caret-right"></i>&#160;
-                    <strong>選擇日期、場次</strong></h3>
-                <div class="tabpanel" style="display: none;">
-                   
-        
-                </div>
-                <div class="pfmitem">
-                    <div class="pfmcontainer">
-                        <h3 class="tab">
-                            <i class="fas fa-caret-right"></i>&#160;
-                            <strong>填寫付款資料</strong></h3>
-                        <div class="tabpanel" style="display: none;">
+            <div class="pfmitem">
+                <div class="pfmcontainer">
+                    <h3 class="tab">
+                        
+                        <strong>選擇日期、場次</strong>
+                    <i class="fas fa-caret-right" style="padding-right: 10px;"></i>&#160;</h3>                        
+                    <div class="tabpanel" style="display: none;">
+                        <h3>場次</h3>
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
                            
+                            <li class="nav-item">                                
+                                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
+                                    aria-selected="true">10:00</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
+                                    aria-selected="false">12:00</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact"
+                                    aria-selected="false">14:00</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact"
+                                    aria-selected="false">16:00</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact"
+                                    aria-selected="false">18:00</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact"
+                                    aria-selected="false">20:00</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div>
+                            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
+                            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+                    
                         </div>
-                        <div class="pfmitem">
-                            <div class="pfmcontainer">
-                                <h3 class="tab">
-                                    <i class="fas fa-caret-right"></i>&#160;
-                                    <strong>選擇日期、場次</strong></h3>
-                                <div class="tabpanel" style="display: none;">
+                    </div>
                         
-                        
-                                </div>
-                </div>
+
+                    </div>
+                    <div class="pfmitem">
+                        <div class="pfmcontainer">
+                            <h3 class="tab">
+                                
+                                <strong>填寫訂購人資料</strong>
+                            <i class="fas fa-caret-right" ></i>&#160;</h3>
+                          
+                            <div class="pfmitem">
+                                <div class="pfmcontainer">
+                                    <h3 class="tab" >
+                                       
+                                        <strong>填寫付款資料</strong><i class="fas fa-caret-right"></i></h3>
+                                    <div class="tabpanel" style="display: none;">
+
+
+                                    </div>
+                                    <div class="pfmitem">
+                                        <div class="pfmcontainer">
+                                            <h3 class="tab">                                               
+                                                <strong>確認付款明細</strong>
+                                            <i class="fas fa-caret-right"></i></h3>
+                                            <div class="tabpanel" style="display: none;">                                                
+                                            </div>
+                                        </div>
     </section>
-<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
     <script>
         $(document).ready(function () {
             $('.tabpanel').hide();
@@ -72,4 +134,5 @@
         })
     </script>
 </body>
+
 </html>

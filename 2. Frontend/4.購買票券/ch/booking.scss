@@ -38,10 +38,13 @@ h1{
   
 }
 .content_text{
-  padding: 5px;
+  padding: 10px;
   font-size: $font_size;
   line-height: $ling_high;
 }
 .tab{
   padding: 20px;
+}
+@media (max-width:568px){
+  
 }
