@@ -36,75 +36,118 @@
                     <span><i class="fas fa-mobile-alt" style="padding-right: 10px;"></i>現場請出示 QR code</span>
                 </div>
             </div>
+            <!-- 左邊行程特色 介紹 -->
             <div class="pfmitem">
                 <div class="pfmcontainer">
                     <h3 class="tab">
-                        
                         <strong>選擇日期、場次</strong>
-                    <i class="fas fa-caret-right" style="padding-right: 10px;"></i>&#160;</h3>                        
+                        <i class="fas fa-caret-right" style="padding-right: 10px;"></i>&#160;</h3>
                     <div class="tabpanel" style="display: none;">
-                        <h4>場次</h4>
+                        <h4 class="padding-left">請選擇使用日期</h4>
+                        <form action="/action_page.php">
+                            <label for="birthday"></label>
+                            <input type="date" id="birthday" name="birthday">
+
+                        </form>
                         <ul class="nav nav-tabs" id="myTab" role="tablist">
-                           
-                            <li class="nav-item">                                
-                                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
-                                    aria-selected="true">10:00</a>
+
+                            <li class="nav-item">
+                                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
+                                    aria-controls="home" aria-selected="true">10:00</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
-                                    aria-selected="false">12:00</a>
+                                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
+                                    aria-controls="profile" aria-selected="false">12:00</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact"
-                                    aria-selected="false">14:00</a>
+                                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab"
+                                    aria-controls="contact" aria-selected="false">14:00</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact"
-                                    aria-selected="false">16:00</a>
+                                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab"
+                                    aria-controls="contact" aria-selected="false">16:00</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact"
-                                    aria-selected="false">18:00</a>
+                                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab"
+                                    aria-controls="contact" aria-selected="false">18:00</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact"
-                                    aria-selected="false">20:00</a>
+                                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab"
+                                    aria-controls="contact" aria-selected="false">20:00</a>
                             </li>
                         </ul>
                         <div class="tab-content" id="myTabContent">
-                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div>
-                            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
-                            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
-                    
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                ...</div>
+                            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...
+                            </div>
+                            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...
+                            </div>
+
                         </div>
                     </div>
-                        
 
+                </div>
+                <!-- 確認付款明細 start-->
+                <div class="pfmitem">
+                    <div class="pfmcontainer">
+                        <h3 class="tab">
+                            <strong>確認付款明細</strong>
+                            <i class="fas fa-caret-right" style="padding-right: 10px;"></i></h3>
+                        <div class="tabpanel" style="display: none;">
+                            <h4 class="padding-left">訂購人資料</h4>
+                            <form id="register_form" role="form" data-toggle="validator">
+                                <div class="form-group">
+                                    <input id="inputName" name="Name" type="text" class="form-control" placeholder="姓名"
+                                        required="required">
+                                    <div class="help-block with-errors" style="color: red;"></div>
+                                </div>
+                                <div class="form-group">
+                                    <input id="inputEmail" name="Email" class="form-control" type="email"
+                                        placeholder="電子郵件地址" data-error="郵件格式錯誤" required="required">
+                                    <div class="help-block with-errors" style="color: red;"></div>
+                                </div>
+                                <div class="form-group">
+                                    <input id="inputTel" name="Number" class="form-control" type="number"
+                                        placeholder="手機號碼" data-error="輸入格式錯誤" required="required">
+                                    <div class="help-block with-errors" style="color: red;"></div>
+                                </div>
+                                <input type="submit" value="繼續" class="btn btn-danger btn-block"
+                                    style="background: #26bec9" />
+                            </form>
+                        </div>
                     </div>
+                    <!-- 確認付款明細 end-->
+                    <!--  填寫付款資料 start-->
                     <div class="pfmitem">
                         <div class="pfmcontainer">
                             <h3 class="tab">
-                                
-                                <strong>填寫訂購人資料</strong>
-                            <i class="fas fa-caret-right" ></i>&#160;</h3>
-                          
+                                <strong style="padding-right: 10px;">填寫付款資料</strong><i class="fas fa-caret-right" ></i></h3>
+                            <div class="tabpanel" style="display: none;">
+                                <div class="form-group">
+                                    <h4 class="padding-left">信用卡號碼</h4>
+                                    <label for="ccn"></label>
+                                    <input id="ccn" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number" maxlength="14"
+                                        placeholder="xxxx xxxx xxxx xxxx">
+                                        
+                                    <div class="help-block with-errors" style="color: red;"></div>
+                                </div>
+                            </div>
+                            <!-- 填寫付款資料 end -->
+                            <!-- 確認付款明細 -->
                             <div class="pfmitem">
                                 <div class="pfmcontainer">
-                                    <h3 class="tab" >
-                                       
-                                        <strong>填寫付款資料</strong><i class="fas fa-caret-right"></i></h3>
+                                    <h3 class="tab">
+                                        <strong>確認付款明細</strong>
+                                        <i class="fas fa-caret-right"></i></h3>
                                     <div class="tabpanel" style="display: none;">
-
-
+                                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat ipsum
+                                            voluptatum quaerat dolor adipisci esse ratione officiis quidem aliquam,
+                                            omnis, natus porro id fuga molestias culpa, magnam facere? Odio, nesciunt.
+                                        </p>
                                     </div>
-                                    <div class="pfmitem">
-                                        <div class="pfmcontainer">
-                                            <h3 class="tab">                                               
-                                                <strong>確認付款明細</strong>
-                                            <i class="fas fa-caret-right"></i></h3>
-                                            <div class="tabpanel" style="display: none;">                                                
-                                            </div>
-                                        </div>
+                                </div>
+                                <!-- 確認付款明細 -->
     </section>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -116,6 +159,13 @@
         integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
         crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+
+    <!-- bts 表單驗證外掛 cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"></script>
+    <!--執行 Validator-->
+    <script>
+        $("#myForm").validator();
+    </script>
     <script>
         $(document).ready(function () {
             $('.tabpanel').hide();
