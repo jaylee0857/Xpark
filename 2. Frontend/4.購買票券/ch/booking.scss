@@ -3,6 +3,8 @@ $sub_title:26px;
 $second_title:24px;
 $font_size:18px;
 $ling_high:1.5;
+
+
 *{
   box-sizing: border-box;
 }
@@ -48,6 +50,18 @@ h1{
 .tab{
   padding: 20px;
 }
-.pfmcontainer{ 
+.pfmcontainer {
   cursor: pointer;
+}
+.form-group{
+  position: relative;
+}
+.credit{
+  position: absolute;
+ transform: translate(30%,-75%);
+}
+
+// 付款明細
+.pay{
+  padding: 20px;
 }

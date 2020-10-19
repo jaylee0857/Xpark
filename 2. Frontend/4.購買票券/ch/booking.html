@@ -33,7 +33,7 @@
                     <span><i class="fas fa-comment-dollar " style="padding-right: 10px;"></i>6天前可免費取消</span>
                     <br>
                     <br>
-                    <span><i class="fas fa-mobile-alt" style="padding-right: 10px;"></i>現場請出示 QR code</span>
+                    <span><i class="fas fa-mobile-alt" style="padding-right: 15px;"></i>現場請出示 QR code</span>
                 </div>
             </div>
             <!-- 左邊行程特色 介紹 -->
@@ -41,7 +41,7 @@
                 <div class="pfmcontainer">
                     <h3 class="tab">
                         <strong>選擇日期、場次</strong>
-                        <i class="fas fa-caret-right" style="padding-right: 10px;"></i>&#160;</h3>
+                        <i class="fas fa-chevron-down" style="padding-right: 10px;"></i>&#160;</h3>
                     <div class="tabpanel" style="display: none;">
                        
                         <h4 class="padding-left">請選擇使用日期</h4>
@@ -54,24 +54,24 @@
                         <ul class="nav nav-tabs" id="myTab" role="tablist">
 
                             <li class="nav-item">
-                                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
-                                    aria-controls="home" aria-selected="true">10:00</a>
+                                <a class="nav-link  disabled" id="home-tab" data-toggle="tab" href="#home" role="tab"
+                                    aria-controls="home" aria-selected="true" >10:00</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
+                                <a class="nav-link disabled" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
                                     aria-controls="profile" aria-selected="false">12:00</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab"
+                                <a class="nav-link disabled" id="contact-tab" data-toggle="tab" href="#contact" role="tab"
                                     aria-controls="contact" aria-selected="false">14:00</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab"
+                                <a class="nav-link disabled" id="contact-tab" data-toggle="tab" href="#contact" role="tab"
                                     aria-controls="contact" aria-selected="false">16:00</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab"
-                                    aria-controls="contact" aria-selected="false">18:00</a>
+                                <a class="nav-link " id="contact-tab" data-toggle="tab" href="#contact" role="tab"
+                                    aria-controls="contact" aria-selected="false"><i class="fas fa-exclamation-triangle" style="color: rgb(251, 195, 13);"></i>18:00</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab"
@@ -95,7 +95,7 @@
                     <div class="pfmcontainer">
                         <h3 class="tab">
                             <strong>確認付款明細</strong>
-                            <i class="fas fa-caret-right" style="padding-right: 10px;"></i></h3>
+                            <i class="fas fa-chevron-down" style="padding-right: 10px;"></i></h3>
                         <div class="tabpanel" style="display: none;">
                             <h4 class="padding-left">訂購人資料</h4>
                             <hr>
@@ -115,7 +115,7 @@
                                         placeholder="手機號碼" data-error="輸入格式錯誤" required="required">
                                     <div class="help-block with-errors" style="color: red;"></div>
                                 </div>
-                                <input type="submit" value="繼續" class="btn btn-danger btn-block"
+                                <input type="submit" value="繼續" class="btn btn-danger btn-block w-25"
                                     style="background: #26bec9" />
                             </form>
                         </div>
@@ -123,22 +123,29 @@
                     <!-- 確認付款明細 end-->
                     <!--  填寫付款資料 start-->
                     <div class="pfmitem">
-                        <div class="pfmcontainer">
+                        <div class="pfmcontainer ">
                             <h3 class="tab">
-                                <strong style="padding-right: 10px;">填寫付款資料</strong><i class="fas fa-caret-right" ></i></h3>
+                                <strong style="padding-right: 10px;">填寫付款資料</strong><i class="fas fa-chevron-down"></i></h3>
                             <div class="tabpanel" style="display: none;">
                                 <div class="form-group">
                                     <h4 class="padding-left">請選擇付款方式</h4>
                                     <hr>
-                                    <div class="custom-control custom-radio" style="padding-left: 46px">
+                                    <div class="custom-control custom-radio" style="padding-left: 46px" >
                                         <input type="radio" class="custom-control-input " id="defaultGroupExample1" name="groupOfDefaultRadios">
                                         <label class="custom-control-label" for="defaultGroupExample1">信用卡</label>
+                                        <div class="credit">
+                                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Visa.svg/1200px-Visa.svg.png" style="width: 10%; height: 35px;" alt="">
+                                            <img src="https://www.mastercard.com.tw/content/dam/mccom/global/logos/logo-mastercard-mobile.svg" style="width: 10%; height: 35px;" alt="">
+                                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/JCB_logo.svg/1200px-JCB_logo.svg.png"  style="width: 10%; height: 35px;" alt="">
+                                        </div>
                                       </div>
                                       <hr>
                                       <div class="ccn " style="padding-left: 20px">
-                                    <label for="ccn"></label>
+                                    <label for="ccn">信用卡號碼</label>
+                                    <br>
                                     <input id="ccn" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number" maxlength="14"
                                         placeholder="xxxx xxxx xxxx xxxx">
+                                      
                                     </div>
                                     <div class="help-block with-errors" style="color: red;"></div>
                                 </div>
@@ -149,12 +156,12 @@
                                 <div class="pfmcontainer">
                                     <h3 class="tab">
                                         <strong>付款明細</strong>
-                                        <i class="fas fa-caret-right"></i></h3>
+                                        <i class="fas fa-chevron-down"></i></h3>
                                     <div class="tabpanel" style="display: none;">
-                                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat ipsum
-                                            voluptatum quaerat dolor adipisci esse ratione officiis quidem aliquam,
-                                            omnis, natus porro id fuga molestias culpa, magnam facere? Odio, nesciunt.
-                                        </p>
+                                      <div class="pay">
+                                          <img src="https://www.xpark.com.tw/upload/news63_cover_20201015155524.jpg" alt="" style="width: 30%;">
+                                         <span>桃園青埔 | Xpark 都會型水生公園門票</span>
+                                      </div>
                                     </div>
                                 </div>
                                 <!-- 確認付款明細 -->
