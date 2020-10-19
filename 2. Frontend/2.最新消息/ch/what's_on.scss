@@ -56,16 +56,16 @@ body {
           margin: 0;
           font-size: $title;
 
-          &::before {
-            content: " ";
-            position: absolute;
-            top: -1px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 5px;
-            height: 40px;
-            background-color: $grey;
-          }
+          // &::before {
+          //   content: " ";
+          //   position: absolute;
+          //   top: -1px;
+          //   left: 50%;
+          //   transform: translateX(-50%);
+          //   width: 5px;
+          //   height: 40px;
+          //   background-color: $grey;
+          // }
         }
       }
 
@@ -430,9 +430,9 @@ body {
 
 .sea_life {
   position: absolute;
-  bottom: 50px;
+  bottom: 70px;
   left: 10%;
-  z-index: 3;
+  z-index: 0;
   width: 100px;
   animation-name: movement;
   animation-duration: 4s;
