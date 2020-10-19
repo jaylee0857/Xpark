@@ -17,6 +17,12 @@ body {
   display: -ms-flexbox;
   display: flex;
 }
+.jcsb{
+  justify-content: space-between;
+}
+.jcsa{
+  justify-content: space-around;
+}
 .flex_wrap{
   flex-wrap: wrap;
 }
@@ -49,16 +55,27 @@ h1 {
 }
 
 .content_text {
-  padding: 10px;
+  padding: 15px;
   font-size: 18px;
   line-height: 1.5;
 }
-
+.nav-link{
+  color: black;
+}
 .tab {
   padding: 20px;
 }
 
 .pfmcontainer {
   cursor: pointer;
+  padding: 10px;
+}
+.form-group{
+  position: relative;
+}
+.credit{
+  position: absolute;
+ transform: translate(30%,-75%);
+
 }
 /*# sourceMappingURL=booking.css.map */

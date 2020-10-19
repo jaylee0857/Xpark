@@ -59,4 +59,18 @@ h1 {
 .pfmcontainer {
   cursor: pointer;
 }
+
+.form-group {
+  position: relative;
+}
+
+.credit {
+  position: absolute;
+  -webkit-transform: translate(30%, -75%);
+          transform: translate(30%, -75%);
+}
+
+.pay {
+  padding: 20px;
+}
 /*# sourceMappingURL=booking.css.map */
