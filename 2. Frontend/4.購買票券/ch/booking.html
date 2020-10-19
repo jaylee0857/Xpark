@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
         integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="../css/booking.css">
+    <link rel="stylesheet" href="./booking.css">
 
     <title>booking</title>
 </head>
@@ -43,7 +43,7 @@
                         <strong>選擇日期、場次</strong>
                         <i class="fas fa-chevron-down" style="padding-right: 10px;"></i>&#160;</h3>
                     <div class="tabpanel" style="display: none;">
-                       
+
                         <h4 class="padding-left">請選擇使用日期</h4>
                         <hr>
                         <form action="/action_page.php">
@@ -55,23 +55,24 @@
 
                             <li class="nav-item">
                                 <a class="nav-link  disabled" id="home-tab" data-toggle="tab" href="#home" role="tab"
-                                    aria-controls="home" aria-selected="true" >10:00</a>
+                                    aria-controls="home" aria-selected="true">10:00</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link disabled" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
-                                    aria-controls="profile" aria-selected="false">12:00</a>
+                                <a class="nav-link disabled" id="profile-tab" data-toggle="tab" href="#profile"
+                                    role="tab" aria-controls="profile" aria-selected="false">12:00</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link disabled" id="contact-tab" data-toggle="tab" href="#contact" role="tab"
-                                    aria-controls="contact" aria-selected="false">14:00</a>
+                                <a class="nav-link disabled" id="contact-tab" data-toggle="tab" href="#contact"
+                                    role="tab" aria-controls="contact" aria-selected="false">14:00</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link disabled" id="contact-tab" data-toggle="tab" href="#contact" role="tab"
-                                    aria-controls="contact" aria-selected="false">16:00</a>
+                                <a class="nav-link disabled" id="contact-tab" data-toggle="tab" href="#contact"
+                                    role="tab" aria-controls="contact" aria-selected="false">16:00</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link " id="contact-tab" data-toggle="tab" href="#contact" role="tab"
-                                    aria-controls="contact" aria-selected="false"><i class="fas fa-exclamation-triangle" style="color: rgb(251, 195, 13);"></i>18:00</a>
+                                    aria-controls="contact" aria-selected="false"><i class="fas fa-exclamation-triangle"
+                                        style="color: rgb(251, 195, 13);"></i>18:00</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab"
@@ -125,28 +126,45 @@
                     <div class="pfmitem">
                         <div class="pfmcontainer ">
                             <h3 class="tab">
-                                <strong style="padding-right: 10px;">填寫付款資料</strong><i class="fas fa-chevron-down"></i></h3>
+                                <strong style="padding-right: 10px;">填寫付款資料</strong><i class="fas fa-chevron-down"></i>
+                            </h3>
                             <div class="tabpanel" style="display: none;">
                                 <div class="form-group">
                                     <h4 class="padding-left">請選擇付款方式</h4>
                                     <hr>
-                                    <div class="custom-control custom-radio" style="padding-left: 46px" >
-                                        <input type="radio" class="custom-control-input " id="defaultGroupExample1" name="groupOfDefaultRadios">
+                                    <div class="custom-control custom-radio" style="padding-left: 46px">
+                                        <input type="radio" class="custom-control-input " id="defaultGroupExample1"
+                                            name="groupOfDefaultRadios">
                                         <label class="custom-control-label" for="defaultGroupExample1">信用卡</label>
                                         <div class="credit">
-                                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Visa.svg/1200px-Visa.svg.png" style="width: 10%; height: 35px;" alt="">
-                                            <img src="https://www.mastercard.com.tw/content/dam/mccom/global/logos/logo-mastercard-mobile.svg" style="width: 10%; height: 35px;" alt="">
-                                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/JCB_logo.svg/1200px-JCB_logo.svg.png"  style="width: 10%; height: 35px;" alt="">
+                                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Visa.svg/1200px-Visa.svg.png"
+                                                style="width: 10%; height: 35px;" alt="">
+                                            <img src="https://www.mastercard.com.tw/content/dam/mccom/global/logos/logo-mastercard-mobile.svg"
+                                                style="width: 10%; height: 35px;" alt="">
+                                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/JCB_logo.svg/1200px-JCB_logo.svg.png"
+                                                style="width: 10%; height: 35px;" alt="">
                                         </div>
-                                      </div>
-                                      <hr>
-                                      <div class="ccn " style="padding-left: 20px">
-                                    <label for="ccn">信用卡號碼</label>
-                                    <br>
-                                    <input id="ccn" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number" maxlength="14"
-                                        placeholder="xxxx xxxx xxxx xxxx">
-                                      
                                     </div>
+                                    <hr>
+                                    <div class="ccn " style="padding-left: 20px">
+                                        <div class="form-group">
+                                            <label for="ccn">信用卡號碼</label>
+                                            <br>
+                                            <input id="ccn" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}"
+                                                autocomplete="cc-number" minlength="16" maxlength="16"
+                                                placeholder="xxxx xxxx xxxx xxxx" data-error="輸入格式錯誤"
+                                                required="required">
+                                        </div>
+                                        <label for="ccn">有效期限</label>                                   
+                                        <input id="ccn" type="month" inputmode="numeric" pattern="[0-9\s]{13,19}"
+                                            autocomplete="cc-number" maxlength="14" placeholder="xxxx xxxx xxxx xxxx"
+                                            required="required">                    
+
+                                        <label for="ccn">CVC/CVV</label>                                     
+                                        <input name="credit-cvc" class="cc-cvc" type="tel" pattern="\d*" maxlength="4"
+                                            placeholder="CVC">
+                                    </div>
+
                                     <div class="help-block with-errors" style="color: red;"></div>
                                 </div>
                             </div>
@@ -158,10 +176,26 @@
                                         <strong>付款明細</strong>
                                         <i class="fas fa-chevron-down"></i></h3>
                                     <div class="tabpanel" style="display: none;">
-                                      <div class="pay">
-                                          <img src="https://www.xpark.com.tw/upload/news63_cover_20201015155524.jpg" alt="" style="width: 30%;">
-                                         <span>桃園青埔 | Xpark 都會型水生公園門票</span>
-                                      </div>
+                                        <div class="pay">
+                                            <div class="pay_img">
+                                                <img src="https://www.xpark.com.tw/upload/news63_cover_20201015155524.jpg"
+                                                    alt="">
+                                            </div>
+                                            <div class="pay_content">
+                                                <div class="pay_title">
+                                                    <span>桃園青埔|Xpark都會型水生公園門票</span>
+                                                    <br>
+                                                    <span>Xpark 入園門票</span>
+                                                    <br>
+                                                    <div class="pay_icon">
+                                                        <span><i class="far fa-calendar-alt"
+                                                                style="padding-right: 10px;"></i>2020-10-18</span>
+                                                        <span><i class="far fa-clock"
+                                                                style="padding-right: 5px;"></i></i>18:00</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <!-- 確認付款明細 -->

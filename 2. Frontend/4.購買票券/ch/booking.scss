@@ -9,11 +9,10 @@ $ling_high:1.5;
   box-sizing: border-box;
 }
 body {
-   margin: 0;
+   margin: 0;   
 }
 .container {
-  max-width: 1140px;
-  margin: auto;
+  max-width: 1140px;  
 }
 .d-flex{
   display: flex;
@@ -22,11 +21,11 @@ body {
   margin: 50px 0 50px 0 ;
 }
 .padding-left{
-  padding-left:10px;
+  padding-left:20px;
 }
 @media (max-width:992px){
   .container {
-    max-width: 100%;
+    width: 100%;
   }
 }
 h1{
@@ -52,16 +51,36 @@ h1{
 }
 .pfmcontainer {
   cursor: pointer;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .form-group{
   position: relative;
 }
 .credit{
   position: absolute;
- transform: translate(30%,-75%);
+  transform: translate(30%,-75%);
 }
 
 // 付款明細
 .pay{
-  padding: 20px;
+  width: 100%;
+  padding: 20px; 
+  display: flex;
+  justify-content: flex-start; 
+}
+.pay_img {
+  padding: 5px;
+}
+.pay_img img{
+  width: 150px;
+  height: 150px;
+}
+.pay_title{
+  font-size: $font_size;
+  font-weight: 900;
+  padding: 5px 0 5px 0;
+}
+.pay_icon{
+  font-weight: normal;
 }
