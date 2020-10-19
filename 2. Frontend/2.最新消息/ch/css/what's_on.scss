@@ -1,19 +1,6 @@
-// color
-$light_blue: #bfdedc;
-$dark_blue: #036eb8;
-$blue: #01a0e9;
-$black: black;
-$grey: #4d4d4d;
-$light_grey: #666666;
-$white: white;
-@mixin shadow() {
-  -webkit-box-shadow: 6px 7px 28px -5px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 6px 7px 28px -5px rgba(0, 0, 0, 0.75);
-  box-shadow: 6px 7px 28px -5px rgba(0, 0, 0, 0.75);
-}
+@import "_style.scss";
 
-// font_size
-$title: 36px;
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap");
 
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap");
 
@@ -28,7 +15,10 @@ body {
   height: 100vh;
   background-color: $light_blue;
   font-family: "Noto Sans TC", sans-serif;
+<<<<<<< HEAD:2. Frontend/2.最新消息/ch/css/what's_on.scss
+=======
   font-weight: 500;
+>>>>>>> 5aed8618889663478c3cfc2459d3cf7e198db31b:2. Frontend/2.最新消息/ch/what's_on.scss
 }
 // 位置顯示屬性 display , float , position
 // 盒模型  width , height , padding , margin ,border
@@ -48,13 +38,13 @@ body {
 }
 
 .wrapper {
-  width: 100%;
-  height: 85vh;
   display: flex;
   justify-content: center;
+  width: 100%;
+  height: 85vh;
 
   .container {
-    width: 90%;
+    max-width: 1140px;
     height: 100%;
     @media (max-width: 768px) {
       height: 95vw;
@@ -64,17 +54,28 @@ body {
     }
     
 
+    &.change_border {
+      max-width: 100%;
+    }
+    @media (max-width: 1140px) {
+      width: 768px;
+    }
+    @media (max-width: 768px) {
+      width: 576px;
+    }
+    @media (max-width: 576px) {
+      width: 100%;
+    }
+
     .title_group {
       width: 100%;
       height: 20%;
-      position: relative;
 
       .title_box {
         display: flex;
         justify-content: center;
 
         #title_news {
-          position: relative;
           display: inline-block;
           padding-top: 30px;
           margin: 0;
@@ -88,7 +89,7 @@ body {
 
         .tab-btn {
           padding: 0 20px;
-          font-weight: 900;
+          font-weight: 700;
           color: $light_grey;
 
           &:hover {
@@ -119,14 +120,20 @@ body {
         background-color: $light_blue;
 
         .news_list {
-          width: 30%;
-          height: 40px;
           display: flex;
           align-items: center;
           margin: 10px;
+          width: 30%;
+          height: 40px;
           background-color: $white;
+<<<<<<< HEAD:2. Frontend/2.最新消息/ch/css/what's_on.scss
+          font-weight: 500;
+          border-radius: 5px;
+          @media (max-width: 1140px) {
+=======
           border-radius: 5px;
           @media (max-width: 768px) {
+>>>>>>> 5aed8618889663478c3cfc2459d3cf7e198db31b:2. Frontend/2.最新消息/ch/what's_on.scss
             height: 60px;
           }
 
@@ -148,13 +155,13 @@ body {
         }
 
         .news_info {
-          width: 65%;
           position: absolute;
           right: 1%;
           top: 15px;
           display: flex;
           flex-direction: column;
           align-items: center;
+          width: 65%;
           opacity: 0;
           pointer-events: none;
 
@@ -171,6 +178,7 @@ body {
           }
         }
       }
+
       #activities {
         position: relative;
         opacity: 0;
@@ -180,12 +188,12 @@ body {
           opacity: 1;
           pointer-events: unset;
         }
+
         .swiper-container {
           width: 100%;
           height: 100%;
           display: flex;
-          // --swiper-theme-color: #ff6600;
-          --swiper-pagination-color: #000000; /* 兩種都可以 */
+          --swiper-pagination-color: #000000;
 
           .swiper-wrapper {
             align-items: flex-end;
@@ -193,44 +201,82 @@ body {
               display: flex;
               flex-wrap: wrap;
               justify-content: center;
-              height: 60%;
+              align-items: flex-end;
+              height: 100%;
+              padding-bottom: 10px;
               transition: 0.3s;
-              background-color: $blue;
+              // background-color: $blue;
               border-top-left-radius: 5px;
               border-top-right-radius: 5px;
-              @include shadow();
+              // @include shadow();
 
               &.swiper-slide-prev {
-                height: 60%;
+                width: 40% !important;
+                @media (max-width:768px) {
+                  width: 50% !important;
+                }
+                p {
+                  transition: 0.3s;
+                  opacity: 1;
+                }
+                .img {
+                  img {
+                    max-height: unset;
+                  }
+                }
               }
 
               &.swiper-slide-active {
-                height: 100%;
+                width: 35% !important;
+                @media (max-width:768px) {
+                  width: 50% !important;
+                }
+                .img {
+                  img {
+                    max-height: 350px;
+                  }
+                }
               }
               &.swiper-slide-next {
-                height: 80%;
-                transform: scale(1);
+                width: 25% !important;
+                @media (max-width:768px) {
+                  width: unset !important;
+                }
+                .img {
+                  img {
+                    max-height: 220px;
+                  }
+                }
               }
             }
 
+           
+
             p {
-              margin: 10%;
+              text-align: center;
+              opacity: 0;
             }
 
             .img {
-              width: 80%;
-
+              width: 100%;
+              padding: 0 15px;
               img {
+                max-height: 220px;
                 width: 100%;
               }
             }
+          }
+
+          .swiper-pagination-bullets {
+            bottom: -4px;
           }
         }
       }
 
       .activities_info {
         position: absolute;
-        left: 66%;
+        top: 0px;
+        left: 65%;
         z-index: 2;
         width: 30%;
         background-color: $white;
@@ -276,13 +322,17 @@ body {
   }
 
   .fa-bars {
-    font-size: 50px;
+    display: none;
     position: absolute;
     top: 10px;
     right: 10px;
     color: $white;
     transition: 0.4s;
+<<<<<<< HEAD:2. Frontend/2.最新消息/ch/css/what's_on.scss
+    font-size: 50px;
+=======
     display: none;
+>>>>>>> 5aed8618889663478c3cfc2459d3cf7e198db31b:2. Frontend/2.最新消息/ch/what's_on.scss
     @media (max-width: 576px) {
       display: block;
     }
@@ -293,26 +343,56 @@ body {
   }
 
   ul {
-    margin: 0;
     display: flex;
     justify-content: flex-end;
+    margin: 0;
     margin-right: 50px;
+<<<<<<< HEAD:2. Frontend/2.最新消息/ch/css/what's_on.scss
+    @media (max-width: 768px) {
+      justify-content: center;
+      margin-right: 0px;
+      padding-left: 0;
+    }
+    @media (max-width: 576px) {
+      display: none;
+=======
     list-style: none;
     @media (max-width: 576px) {
             display: flex;
+>>>>>>> 5aed8618889663478c3cfc2459d3cf7e198db31b:2. Frontend/2.最新消息/ch/what's_on.scss
       flex-direction: column;
       justify-content: center;
       align-items: center;
       margin: 30%;
       margin-top: 10px;
+<<<<<<< HEAD:2. Frontend/2.最新消息/ch/css/what's_on.scss
+      height: 450px;
+=======
       margin-right: 0px;
       display: none;
       height: 500px;
+>>>>>>> 5aed8618889663478c3cfc2459d3cf7e198db31b:2. Frontend/2.最新消息/ch/what's_on.scss
 
       &.active {
         display: block;
       }
     }
+<<<<<<< HEAD:2. Frontend/2.最新消息/ch/css/what's_on.scss
+
+    li {
+      position: relative;
+      margin-top: 30px;
+      margin-right: 20px;
+      list-style: none;
+      font-weight: 500;
+
+      @media (max-width: 768px) {
+        margin-right: 5px;
+      }
+      @media (max-width: 576px) {
+        color: $white;
+        position: relative;
+=======
 
     li {
       margin-top: 70px;
@@ -323,10 +403,13 @@ body {
         font-size: 18px;
         color: $white;
         // position: relative;
+>>>>>>> 5aed8618889663478c3cfc2459d3cf7e198db31b:2. Frontend/2.最新消息/ch/what's_on.scss
 
         &:hover {
           color: $black;
         }
+<<<<<<< HEAD:2. Frontend/2.最新消息/ch/css/what's_on.scss
+=======
       }
 
       &:hover .bubble {
@@ -335,27 +418,47 @@ body {
 
       &:nth-child(7) a {
         margin-right: 0px;
+>>>>>>> 5aed8618889663478c3cfc2459d3cf7e198db31b:2. Frontend/2.最新消息/ch/what's_on.scss
       }
 
       a {
         text-decoration: none;
         color: $grey;
+<<<<<<< HEAD:2. Frontend/2.最新消息/ch/css/what's_on.scss
+        font-size: 20px;
+        @media (max-width: 860px) {
+          font-size: 16px;
+        }
+        @media (max-width: 768px) {
+          font-size: 14px;
+        }
+        @media (max-width: 576px) {
+          font-size: 22px;
+        }
+=======
         @media (max-width: 768px) {
           text-decoration: none;
           margin-right: 7px;
           font-size: 14px;
         }
+>>>>>>> 5aed8618889663478c3cfc2459d3cf7e198db31b:2. Frontend/2.最新消息/ch/what's_on.scss
 
         &:hover {
           color: $dark_blue;
         }
-
         .bubble {
           position: absolute;
           top: -60px;
           z-index: 3;
-          opacity: 0;
+          display: none;
         }
+<<<<<<< HEAD:2. Frontend/2.最新消息/ch/css/what's_on.scss
+
+        &:hover .bubble {
+          display: block;
+        }
+=======
+>>>>>>> 5aed8618889663478c3cfc2459d3cf7e198db31b:2. Frontend/2.最新消息/ch/what's_on.scss
       }
     }
   }
@@ -375,6 +478,8 @@ body {
   color: $black;
 }
 
+<<<<<<< HEAD:2. Frontend/2.最新消息/ch/css/what's_on.scss
+=======
 
   .ugly_fish_text {
     position: absolute;
@@ -413,6 +518,7 @@ body {
   }
 }
 
+>>>>>>> 5aed8618889663478c3cfc2459d3cf7e198db31b:2. Frontend/2.最新消息/ch/what's_on.scss
 //  sea urchin svg
 .st0 {
   fill: #ffffff;
@@ -423,7 +529,11 @@ body {
 
 .sea_life {
   position: absolute;
+<<<<<<< HEAD:2. Frontend/2.最新消息/ch/css/what's_on.scss
+  bottom: 60px;
+=======
   bottom: 150px;
+>>>>>>> 5aed8618889663478c3cfc2459d3cf7e198db31b:2. Frontend/2.最新消息/ch/what's_on.scss
   left: 10%;
   z-index: 0;
   width: 100px;
@@ -462,6 +572,9 @@ body {
   animation-duration: 2s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 
 @keyframes moveforward {
@@ -484,4 +597,7 @@ body {
   font-weight: 900;
   color: $grey;
   font-size: 12px;
+  @media (max-width: 768px) {
+    display: none;
+  }
 }

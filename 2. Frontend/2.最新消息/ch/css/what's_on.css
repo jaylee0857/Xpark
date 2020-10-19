@@ -1,4 +1,7 @@
+<<<<<<< HEAD:2. Frontend/2.最新消息/ch/css/what's_on.css
+=======
 @charset "UTF-8";
+>>>>>>> 5aed8618889663478c3cfc2459d3cf7e198db31b:2. Frontend/2.最新消息/ch/what's_on.css
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap");
 * {
   -webkit-box-sizing: border-box;
@@ -12,6 +15,8 @@ body {
   height: 100vh;
   background-color: #bfdedc;
   font-family: "Noto Sans TC", sans-serif;
+<<<<<<< HEAD:2. Frontend/2.最新消息/ch/css/what's_on.css
+=======
   font-weight: 500;
 }
 
@@ -25,27 +30,44 @@ body {
 
 #logo img {
   width: 100%;
+>>>>>>> 5aed8618889663478c3cfc2459d3cf7e198db31b:2. Frontend/2.最新消息/ch/what's_on.css
 }
 
 .wrapper {
-  width: 100%;
-  height: 85vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  width: 100%;
+  height: 85vh;
 }
 
 .wrapper .container {
-  width: 90%;
+  max-width: 1140px;
   height: 100%;
+}
+
+<<<<<<< HEAD:2. Frontend/2.最新消息/ch/css/what's_on.css
+.wrapper .container.change_border {
+  max-width: 100%;
+}
+
+@media (max-width: 1140px) {
+  .wrapper .container {
+    width: 768px;
+  }
 }
 
 @media (max-width: 768px) {
   .wrapper .container {
+    width: 576px;
+=======
+@media (max-width: 768px) {
+  .wrapper .container {
     height: 95vw;
+>>>>>>> 5aed8618889663478c3cfc2459d3cf7e198db31b:2. Frontend/2.最新消息/ch/what's_on.css
   }
 }
 
@@ -58,7 +80,6 @@ body {
 .wrapper .container .title_group {
   width: 100%;
   height: 20%;
-  position: relative;
 }
 
 .wrapper .container .title_group .title_box {
@@ -71,7 +92,6 @@ body {
 }
 
 .wrapper .container .title_group .title_box #title_news {
-  position: relative;
   display: inline-block;
   padding-top: 30px;
   margin: 0;
@@ -89,7 +109,7 @@ body {
 
 .wrapper .container .title_group span .tab-btn {
   padding: 0 20px;
-  font-weight: 900;
+  font-weight: 700;
   color: #666666;
 }
 
@@ -125,8 +145,6 @@ body {
 }
 
 .wrapper .container .content .content_group .news_list {
-  width: 30%;
-  height: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -134,11 +152,21 @@ body {
       -ms-flex-align: center;
           align-items: center;
   margin: 10px;
+  width: 30%;
+  height: 40px;
   background-color: white;
+<<<<<<< HEAD:2. Frontend/2.最新消息/ch/css/what's_on.css
+  font-weight: 500;
+  border-radius: 5px;
+}
+
+@media (max-width: 1140px) {
+=======
   border-radius: 5px;
 }
 
 @media (max-width: 768px) {
+>>>>>>> 5aed8618889663478c3cfc2459d3cf7e198db31b:2. Frontend/2.最新消息/ch/what's_on.css
   .wrapper .container .content .content_group .news_list {
     height: 60px;
   }
@@ -162,7 +190,6 @@ body {
 }
 
 .wrapper .container .content .content_group .news_info {
-  width: 65%;
   position: absolute;
   right: 1%;
   top: 15px;
@@ -176,6 +203,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 65%;
   opacity: 0;
   pointer-events: none;
 }
@@ -210,7 +238,6 @@ body {
   display: -ms-flexbox;
   display: flex;
   --swiper-pagination-color: #000000;
-  /* 兩種都可以 */
 }
 
 .wrapper .container .content #activities .swiper-container .swiper-wrapper {
@@ -228,45 +255,88 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 60%;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  height: 100%;
+  padding-bottom: 10px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  background-color: #01a0e9;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
-  -webkit-box-shadow: 6px 7px 28px -5px rgba(0, 0, 0, 0.75);
-  box-shadow: 6px 7px 28px -5px rgba(0, 0, 0, 0.75);
 }
 
 .wrapper .container .content #activities .swiper-container .swiper-wrapper .swiper-slide.swiper-slide-prev {
-  height: 60%;
+  width: 40% !important;
+}
+
+@media (max-width: 768px) {
+  .wrapper .container .content #activities .swiper-container .swiper-wrapper .swiper-slide.swiper-slide-prev {
+    width: 50% !important;
+  }
+}
+
+.wrapper .container .content #activities .swiper-container .swiper-wrapper .swiper-slide.swiper-slide-prev p {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  opacity: 1;
+}
+
+.wrapper .container .content #activities .swiper-container .swiper-wrapper .swiper-slide.swiper-slide-prev .img img {
+  max-height: unset;
 }
 
 .wrapper .container .content #activities .swiper-container .swiper-wrapper .swiper-slide.swiper-slide-active {
-  height: 100%;
+  width: 35% !important;
+}
+
+@media (max-width: 768px) {
+  .wrapper .container .content #activities .swiper-container .swiper-wrapper .swiper-slide.swiper-slide-active {
+    width: 50% !important;
+  }
+}
+
+.wrapper .container .content #activities .swiper-container .swiper-wrapper .swiper-slide.swiper-slide-active .img img {
+  max-height: 350px;
 }
 
 .wrapper .container .content #activities .swiper-container .swiper-wrapper .swiper-slide.swiper-slide-next {
-  height: 80%;
-  -webkit-transform: scale(1);
-          transform: scale(1);
+  width: 25% !important;
+}
+
+@media (max-width: 768px) {
+  .wrapper .container .content #activities .swiper-container .swiper-wrapper .swiper-slide.swiper-slide-next {
+    width: unset !important;
+  }
+}
+
+.wrapper .container .content #activities .swiper-container .swiper-wrapper .swiper-slide.swiper-slide-next .img img {
+  max-height: 220px;
 }
 
 .wrapper .container .content #activities .swiper-container .swiper-wrapper p {
-  margin: 10%;
+  text-align: center;
+  opacity: 0;
 }
 
 .wrapper .container .content #activities .swiper-container .swiper-wrapper .img {
-  width: 80%;
+  width: 100%;
+  padding: 0 15px;
 }
 
 .wrapper .container .content #activities .swiper-container .swiper-wrapper .img img {
+  max-height: 220px;
   width: 100%;
+}
+
+.wrapper .container .content #activities .swiper-container .swiper-pagination-bullets {
+  bottom: -4px;
 }
 
 .wrapper .container .content .activities_info {
   position: absolute;
-  left: 66%;
+  top: 0px;
+  left: 65%;
   z-index: 2;
   width: 30%;
   background-color: white;
@@ -316,14 +386,20 @@ body {
 }
 
 #nav .fa-bars {
-  font-size: 50px;
+  display: none;
   position: absolute;
   top: 10px;
   right: 10px;
   color: white;
   -webkit-transition: 0.4s;
   transition: 0.4s;
-  display: none;
+  font-size: 50px;
+}
+
+@media (max-width: 576px) {
+  #nav .fa-bars {
+    display: block;
+  }
 }
 
 @media (max-width: 576px) {
@@ -337,17 +413,90 @@ body {
 }
 
 #nav ul {
-  margin: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  margin: 0;
   margin-right: 50px;
   list-style: none;
 }
 
+<<<<<<< HEAD:2. Frontend/2.最新消息/ch/css/what's_on.css
+@media (max-width: 768px) {
+  #nav ul {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-right: 0px;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  #nav ul {
+    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 30%;
+    margin-top: 10px;
+    height: 450px;
+  }
+  #nav ul.active {
+    display: block;
+  }
+}
+
+#nav ul li {
+  position: relative;
+  margin-top: 30px;
+  margin-right: 20px;
+  list-style: none;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  #nav ul li {
+    margin-right: 5px;
+  }
+}
+
+@media (max-width: 576px) {
+  #nav ul li {
+    color: white;
+    position: relative;
+  }
+  #nav ul li:hover {
+    color: black;
+  }
+}
+
+#nav ul li a {
+  text-decoration: none;
+  color: #4d4d4d;
+  font-size: 20px;
+}
+
+@media (max-width: 860px) {
+  #nav ul li a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  #nav ul li a {
+    font-size: 14px;
+=======
 @media (max-width: 576px) {
   #nav ul {
     display: -webkit-box;
@@ -461,7 +610,42 @@ body {
 @media (max-width: 576px) {
   .ugly_fish_text {
     opacity: 0;
+>>>>>>> 5aed8618889663478c3cfc2459d3cf7e198db31b:2. Frontend/2.最新消息/ch/what's_on.css
   }
+}
+
+@media (max-width: 576px) {
+  #nav ul li a {
+    font-size: 22px;
+  }
+}
+
+#nav ul li a:hover {
+  color: #036eb8;
+}
+
+#nav ul li a .bubble {
+  position: absolute;
+  top: -60px;
+  z-index: 3;
+  display: none;
+}
+
+#nav ul li a:hover .bubble {
+  display: block;
+}
+
+.fa-minus-circle {
+  color: #4d4d4d;
+  cursor: pointer;
+}
+
+.fa-minus-circle:hover {
+  color: black;
+}
+
+.fa-plus-circle {
+  color: black;
 }
 
 .st0 {
@@ -474,7 +658,11 @@ body {
 
 .sea_life {
   position: absolute;
+<<<<<<< HEAD:2. Frontend/2.最新消息/ch/css/what's_on.css
+  bottom: 60px;
+=======
   bottom: 150px;
+>>>>>>> 5aed8618889663478c3cfc2459d3cf7e198db31b:2. Frontend/2.最新消息/ch/what's_on.css
   left: 10%;
   z-index: 0;
   width: 100px;
@@ -540,6 +728,12 @@ body {
           animation-direction: alternate;
 }
 
+@media (max-width: 768px) {
+  .ugly_fish {
+    display: none;
+  }
+}
+
 @-webkit-keyframes moveforward {
   0% {
     right: 60px;
@@ -572,5 +766,11 @@ body {
   font-weight: 900;
   color: #4d4d4d;
   font-size: 12px;
+}
+
+@media (max-width: 768px) {
+  .ugly_fish_text {
+    display: none;
+  }
 }
 /*# sourceMappingURL=what's_on.css.map */
