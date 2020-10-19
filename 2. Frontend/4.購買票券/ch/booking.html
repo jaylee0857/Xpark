@@ -14,9 +14,10 @@
 </head>
 
 <body>
+    <div id="app">
     <section>
         <h1>購買票券</h1>
-        <div class="container d-flex">
+        <div class="container d-flex ">
             <div class="content">
 
                 <h2>一行程特色一</h2>
@@ -73,7 +74,7 @@
                                 <a class="nav-link " id="contact-tab" data-toggle="tab" href="#contact" role="tab"
                                     aria-controls="contact" aria-selected="false"><i class="fas fa-exclamation-triangle"
                                         style="color: rgb(251, 195, 13);"></i>18:00</a>
-                                        
+
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab"
@@ -92,28 +93,46 @@
                                     <div class="men">
                                         <h4>成人<span>(18-64歲)</span></h4>
                                         <div class="count">
-                                        <span>TWD 550/每人</span><span>元</span>
-                                    </div>
+                                            <span>TWD 550/每人</span>
+                                            <a href="" class="cart_btn" @click='removeOne(cartItem)'>-</a>
+                                            <span>{{cartItem.quantity}}</span>
+                                            <a href="" class="cart_btn" @click='addOne(cartItem)'>+</a>
+                                            <span>元</span>
+                                        </div>
                                     </div>
                                     <div class="child">
                                         <h4>兒童<span>(4-11歲以下)</span></h4>
                                         <div class="count">
-                                        <span>TWD 550/每人</span><span>元</span>
-                                    </div>
+                                            <span>TWD 250/每人</span>
+                                            <a href="" class="cart_btn" @click='removeOne(cartItem)'>-</a>
+                                            <span></span>
+                                            <a href="" class="cart_btn" @click='addOne(cartItem)'>+</a>
+                                            <span>元</span>
+                                        </div>
                                     </div>
                                     <div class="oldmen">
-                                         <h4>長者<span>(65歲以上)</span></h4>
-                                         <div class="count">
-                                         <span>TWD 550/每人</span><span>元</span>
+                                        <h4>長者<span>(65歲以上)</span></h4>
+                                        <div class="count">
+                                            <span>TWD 250/每人</span>
+                                            <a href="" class="cart_btn" @click='removeOne(cartItem)'>-</a>
+                                            <span></span>
+                                            <a href="" class="cart_btn" @click='addOne(cartItem)'>+</a>
+                                            <span>元</span>
                                         </div>
                                     </div>
                                     <div class="student">
                                         <h4>學生<span>(12歲以上)</span></h4>
                                         <div class="count">
-                                        <span>TWD 550/每人</span>
-                                        <div class="box"></div>
-                                        <span>元</span>
+                                            <span>TWD 400/每人</span>
+                                            <a href="" class="cart_btn" @click='removeOne(cartItem)'>-</a>
+                                            <span></span>
+                                            <a href="" class="cart_btn" @click='addOne(cartItem)'>+</a>
+                                            <span>元</span>
+                                        </div>
+
                                     </div>
+                                    <div class="total text-right">
+                                       <span>總共</span><span>元</span>
                                     </div>
                                 </div>
 
@@ -187,12 +206,12 @@
                                                 placeholder="xxxx xxxx xxxx xxxx" data-error="輸入格式錯誤"
                                                 required="required">
                                         </div>
-                                        <label for="ccn">有效期限</label>                                   
+                                        <label for="ccn">有效期限</label>
                                         <input id="ccn" type="month" inputmode="numeric" pattern="[0-9\s]{13,19}"
                                             autocomplete="cc-number" maxlength="14" placeholder="xxxx xxxx xxxx xxxx"
-                                            required="required">                    
+                                            required="required">
 
-                                        <label for="ccn">CVC/CVV</label>                                     
+                                        <label for="ccn">CVC/CVV</label>
                                         <input name="credit-cvc" class="cc-cvc" type="tel" pattern="\d*" maxlength="4"
                                             placeholder="CVC">
                                     </div>
@@ -232,6 +251,7 @@
                                 </div>
                                 <!-- 確認付款明細 -->
     </section>
+    </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -246,6 +266,8 @@
     <!-- bts 表單驗證外掛 cdn -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"></script>
     <!--執行 Validator-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.3/vue.min.js"></script>
+    <!-- vue.js cdn -->
     <script>
         $("#myForm").validator();
     </script>
@@ -266,6 +288,51 @@
             })
         })
     </script>
+    <!-- vue start  -->
+     <!-- <script>       
+        new Vue({
+            el: "#app",
+            data: {
+                price: 550,              
+                incart: [],
+            },
+            methods: {
+                 addOne: function (cartItem) {
+                    cartItem.quantity++;
+                  
+                },
+                removeOne: function (cartItem) {
+                    cartItem.quantity--;
+                    // 數量小於0刪除此列
+                    if (cartItem.quantity <= 0) {
+                        /*用編號找會比較麻煩，直接用物件找*/
+                        this.incart.splice(cartItem, 1);
+                    }
+                },
+                  removeElement: function (cartItem) {
+                    /*跟上面的splice效果相同*/
+                    this.incart.splice(cartItem);
+                }
+            },
+                
+                computed: {
+                    countTotal: function () {
+                        //設定初始金額
+                        var countTotal = 0;
+                        // 找購物車裡面全部商品
+                        for (var i in this.incart) {
+                            // 把每個商品的數量乘上單價
+                            countTotal += this.incart[i].quantity * this.incart[i].price;
+                        }
+                        // 回傳到總金額
+                        return countTotal;
+                    },
+                }
+            }
+        });
+    </script> -->
+    
+
 </body>
 
 </html>
