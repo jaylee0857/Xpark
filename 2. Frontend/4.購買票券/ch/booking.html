@@ -16,7 +16,7 @@
 <body>
     <section>
         <h1>購買票券</h1>
-        <div class="container d-flex ">
+        <div class="container d-flex">
             <div class="content">
 
                 <h2>一行程特色一</h2>
@@ -47,7 +47,7 @@
                         <h4 class="padding-left">請選擇使用日期</h4>
                         <hr>
                         <form action="/action_page.php">
-                            <label for="birthday"></label>
+                            <label for="birthday" style="margin-left: 15px;"></label>
                             <input type="date" id="birthday" name="birthday">
 
                         </form>
@@ -73,6 +73,7 @@
                                 <a class="nav-link " id="contact-tab" data-toggle="tab" href="#contact" role="tab"
                                     aria-controls="contact" aria-selected="false"><i class="fas fa-exclamation-triangle"
                                         style="color: rgb(251, 195, 13);"></i>18:00</a>
+                                        
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab"
@@ -84,7 +85,38 @@
                                 ...</div>
                             <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...
                             </div>
-                            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...
+                            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                                <!-- 18:00 的內容 -->
+                                <h6>選擇數量</h6>
+                                <div class="ticket">
+                                    <div class="men">
+                                        <h4>成人<span>(18-64歲)</span></h4>
+                                        <div class="count">
+                                        <span>TWD 550/每人</span><span>元</span>
+                                    </div>
+                                    </div>
+                                    <div class="child">
+                                        <h4>兒童<span>(4-11歲以下)</span></h4>
+                                        <div class="count">
+                                        <span>TWD 550/每人</span><span>元</span>
+                                    </div>
+                                    </div>
+                                    <div class="oldmen">
+                                         <h4>長者<span>(65歲以上)</span></h4>
+                                         <div class="count">
+                                         <span>TWD 550/每人</span><span>元</span>
+                                        </div>
+                                    </div>
+                                    <div class="student">
+                                        <h4>學生<span>(12歲以上)</span></h4>
+                                        <div class="count">
+                                        <span>TWD 550/每人</span>
+                                        <div class="box"></div>
+                                        <span>元</span>
+                                    </div>
+                                    </div>
+                                </div>
+
                             </div>
 
                         </div>
@@ -173,7 +205,7 @@
                             <div class="pfmitem">
                                 <div class="pfmcontainer">
                                     <h3 class="tab">
-                                        <strong>付款明細</strong>
+                                        <strong style="padding-right: 10px;">付款明細</strong>
                                         <i class="fas fa-chevron-down"></i></h3>
                                     <div class="tabpanel" style="display: none;">
                                         <div class="pay">

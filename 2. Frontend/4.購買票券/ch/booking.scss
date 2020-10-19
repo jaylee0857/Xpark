@@ -4,7 +4,7 @@ $second_title:24px;
 $font_size:18px;
 $ling_high:1.5;
 
-
+// 
 *{
   box-sizing: border-box;
 }
@@ -13,6 +13,9 @@ body {
 }
 .container {
   max-width: 1140px;  
+}
+.content{
+  width: 50%;
 }
 .d-flex{
   display: flex;
@@ -23,11 +26,7 @@ body {
 .padding-left{
   padding-left:20px;
 }
-@media (max-width:992px){
-  .container {
-    width: 100%;
-  }
-}
+
 h1{
   text-align: center;
 }
@@ -49,10 +48,43 @@ h1{
 .tab{
   padding: 20px;
 }
+// 選擇日期、場次 start
+.ticket{
+  width: 100%;
+  height: 100%;
+  
+}
+.ticket span {
+  font-weight: 500;
+}
+.men{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.child{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.oldmen{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.student{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+// 選擇日期、場次 end
 .pfmcontainer {
-  cursor: pointer;
-  padding-left: 10px;
+  cursor: pointer; 
   padding-right: 10px;
+}
+.tabpanel{
+  padding-left: 10px;
 }
 .form-group{
   position: relative;
@@ -61,7 +93,10 @@ h1{
   position: absolute;
   transform: translate(30%,-75%);
 }
-
+.ccn{
+  display: flex;
+  flex-direction: column;
+}
 // 付款明細
 .pay{
   width: 100%;
@@ -83,4 +118,15 @@ h1{
 }
 .pay_icon{
   font-weight: normal;
+}
+
+
+
+@media (max-width:992px){
+  .container {
+    width: 100%;
+  }
+  .content{
+    width: 100%;
+  }
 }
