@@ -16,7 +16,7 @@
 <body>
     <section>
         <h1>購買票券</h1>
-        <div class="container d-flex">
+        <div class="container d-flex ">
             <div class="content">
 
                 <h2>一行程特色一</h2>
@@ -43,7 +43,9 @@
                         <strong>選擇日期、場次</strong>
                         <i class="fas fa-caret-right" style="padding-right: 10px;"></i>&#160;</h3>
                     <div class="tabpanel" style="display: none;">
+                       
                         <h4 class="padding-left">請選擇使用日期</h4>
+                        <hr>
                         <form action="/action_page.php">
                             <label for="birthday"></label>
                             <input type="date" id="birthday" name="birthday">
@@ -96,6 +98,7 @@
                             <i class="fas fa-caret-right" style="padding-right: 10px;"></i></h3>
                         <div class="tabpanel" style="display: none;">
                             <h4 class="padding-left">訂購人資料</h4>
+                            <hr>
                             <form id="register_form" role="form" data-toggle="validator">
                                 <div class="form-group">
                                     <input id="inputName" name="Name" type="text" class="form-control" placeholder="姓名"
@@ -125,11 +128,18 @@
                                 <strong style="padding-right: 10px;">填寫付款資料</strong><i class="fas fa-caret-right" ></i></h3>
                             <div class="tabpanel" style="display: none;">
                                 <div class="form-group">
-                                    <h4 class="padding-left">信用卡號碼</h4>
+                                    <h4 class="padding-left">請選擇付款方式</h4>
+                                    <hr>
+                                    <div class="custom-control custom-radio" style="padding-left: 46px">
+                                        <input type="radio" class="custom-control-input " id="defaultGroupExample1" name="groupOfDefaultRadios">
+                                        <label class="custom-control-label" for="defaultGroupExample1">信用卡</label>
+                                      </div>
+                                      <hr>
+                                      <div class="ccn " style="padding-left: 20px">
                                     <label for="ccn"></label>
                                     <input id="ccn" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number" maxlength="14"
                                         placeholder="xxxx xxxx xxxx xxxx">
-                                        
+                                    </div>
                                     <div class="help-block with-errors" style="color: red;"></div>
                                 </div>
                             </div>
@@ -138,7 +148,7 @@
                             <div class="pfmitem">
                                 <div class="pfmcontainer">
                                     <h3 class="tab">
-                                        <strong>確認付款明細</strong>
+                                        <strong>付款明細</strong>
                                         <i class="fas fa-caret-right"></i></h3>
                                     <div class="tabpanel" style="display: none;">
                                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat ipsum
