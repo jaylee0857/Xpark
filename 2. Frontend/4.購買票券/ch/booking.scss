@@ -8,17 +8,26 @@ $ling_high:1.5;
 *{
   box-sizing: border-box;
 }
+
 body {
    margin: 0;   
 }
 .container {
-  max-width: 1140px;  
+ width: 1140px;  
+ height: 100%;
+ margin: auto;
 }
 .content{
   width: 50%;
 }
+.pfmitem{
+  width: 50%;
+}
 .d-flex{
   display: flex;
+}
+.flex-wrap{
+  flex-wrap: wrap;
 }
 .mt_mb{
   margin: 50px 0 50px 0 ;
@@ -32,11 +41,11 @@ h1{
 }
 .pfmitem{ 
   background-color: #f6f6f6;
-  width: 100%;
+  width: 50%;
   height: 100%;
 }
 .content{
-  width: 100%;
+  width: 50%;
   
 }
 .content_text{
@@ -47,6 +56,19 @@ h1{
 }
 .tab{
   padding: 20px;
+}
+// 加減
+
+.cart_btn{
+    display: inline-block;
+    width: 22px;
+    height: 22px;    
+   
+    text-align: center;
+    line-height: 20px;
+    margin-right: 5px;
+    border: 1px solid #26bec9;
+    border-radius:50%;
 }
 // 選擇日期、場次 start
 .ticket{
@@ -122,11 +144,16 @@ h1{
 
 
 
-@media (max-width:992px){
+@media (max-width:568px){
   .container {
-    width: 100%;
+    width: 100%;   
+   
   }
   .content{
-    width: 100%;
+    
+    
+  }
+  .pfmitem{
+    
   }
 }
