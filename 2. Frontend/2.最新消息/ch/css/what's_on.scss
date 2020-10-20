@@ -1,11 +1,9 @@
 @import "_style.scss";
 
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap");
-
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap");
 
 * {
   box-sizing: border-box;
+  
 }
 
 body {
@@ -14,7 +12,7 @@ body {
   width: 100%;
   height: 100vh;
   background-color: $light_blue;
-  font-family: "Noto Sans TC", sans-serif;
+  font-family: source-han-sans-traditional, sans-serif;
 }
 // 位置顯示屬性 display , float , position
 // 盒模型  width , height , padding , margin ,border
