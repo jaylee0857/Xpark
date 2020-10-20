@@ -328,9 +328,23 @@ body {
   max-height: 220px;
 }
 
+.wrapper .container .content #activities .swiper-container .swiper-wrapper .event_title {
+  font-size: 20px;
+}
+
+.wrapper .container .content #activities .swiper-container .swiper-wrapper .event_date {
+  font-size: 12px;
+  color: #555;
+}
+
 .wrapper .container .content #activities .swiper-container .swiper-wrapper p {
-  text-align: center;
+  padding-left: 10px;
+  text-align: left;
   opacity: 0;
+  font-size: 16px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 700px;
 }
 
 .wrapper .container .content #activities .swiper-container .swiper-wrapper .img {
