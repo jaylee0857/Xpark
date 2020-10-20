@@ -19,7 +19,7 @@
             <h1>購買票券</h1>
             <div class="container d-flex ">
                 <div class="content">
-
+                    
                     <h2>一行程特色一</h2>
                     <div class="content_text">
                         由日本橫濱八景島首度來台開設分館 Xpark，
@@ -38,7 +38,9 @@
                     </div>
                 </div>
                 <!-- 左邊行程特色 介紹 -->
+                <!-- <input type="button" value="Reload Page" onClick="document.location.reload(true)"> 重新整理 -->
                 <div class="pfmitem">
+                    
                     <div class="pfmcontainer">
                         <h3 class="tab">
                             <strong>選擇日期、場次</strong>
@@ -86,9 +88,9 @@
                             <div class="tab-content" id="myTabContent">
                                 <div class="tab-pane fade show active" id="home" role="tabpanel"
                                     aria-labelledby="home-tab">
-                                    ...</div>
+                                    </div>
                                 <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                                    ...
+                                    
                                 </div>
                                 <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
                                     <!-- 18:00 的內容 -->
@@ -98,14 +100,14 @@
                             <div>
                                 <h6>選擇數量</h6>
                                 <div class="ticket">
-
+                                    <form action=""></form>
                                     <div class="men" v-for="(item,index) in sub_total_price">
-                                        <h4>{{ball[index]}}<span>({{age[index]}})</span></h4>
+                                        <h4>{{ball[index]}}<span class="age">({{age[index]}})</span></h4>
                                         <div class="count">
                                             <span>TWD {{price[index]}}/每人</span>
                                             <button type="button" class="cart_btn" @click='dec(index)'>-</button>
-                                            <input v-model="item.price" size="1" style="text-align: center;">
-                                            <button type="button" class="cart_btn" @click='inc(index)'>+</button>
+                                            <input v-model="item.price" size="1" style="text-align: center; margin:0 5px 5px 0;" min="1" step="1" type="number">
+                                            <button type="button" class="cart_btn" @click='inc(index)' style="padding-left:5px">+</button>
                                             <span>張</span>
                                         </div>
                                     </div>
@@ -114,6 +116,7 @@
                                         <span>總共</span>
                                         {{sum()}}
                                         <span>元</span>
+                                    </form>
                                     </div>
                                 </div>
                             </div>

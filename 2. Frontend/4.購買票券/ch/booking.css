@@ -71,8 +71,9 @@ h1 {
 
 .cart_btn {
   display: inline-block;
-  width: 22px;
-  height: 22px;
+  width: 25px;
+  height: 25px;
+  color: #26bec9;
   text-align: center;
   line-height: 20px;
   margin-right: 5px;
@@ -230,6 +231,11 @@ h1 {
   border: 0;
   padding: 10px;
   cursor: pointer;
+}
+
+.age {
+  font-size: 16px;
+  color: #aaaaaa;
 }
 
 @media (max-width: 568px) {
