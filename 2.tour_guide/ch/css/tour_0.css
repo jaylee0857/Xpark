@@ -1,0 +1,219 @@
+* {
+  font-family: source-han-sans-traditional, sans-serif;
+}
+
+html, body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #A6D8D0;
+}
+
+.title {
+  font-size: 26px;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  margin-top: 5%;
+}
+
+.title_wave {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%) scale(-1);
+          transform: translateX(-50%) scale(-1);
+  margin-top: 7%;
+  width: 120px;
+}
+
+.left {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  margin-left: 6%;
+}
+
+.left .pic {
+  display: inline-block;
+  width: 800px;
+  border-radius: 10px;
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.left .floors {
+  display: inline-block;
+  margin-bottom: 0px;
+  margin-left: 20px;
+  width: 70px;
+  cursor: pointer;
+}
+
+.left .floors .f_2, .left .floors .f_3 {
+  margin-bottom: -15px;
+}
+
+.fish_area_1 {
+  position: absolute;
+  margin-left: 50%;
+  margin-top: 15%;
+}
+
+.fish_area_1 .fish1 {
+  width: 200px;
+}
+
+.fish_area_1 .area {
+  -webkit-transform: translate(60%, -150px);
+          transform: translate(60%, -150px);
+}
+
+.fish_area_2 {
+  position: absolute;
+  margin-left: 73%;
+  margin-top: 22%;
+}
+
+.fish_area_2 .fish2 {
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+  width: 100px;
+}
+
+.fish_area_2 p {
+  margin-top: -50px;
+  margin-left: -30px;
+  opacity: 0;
+}
+
+.fish_area_3 {
+  position: absolute;
+  margin-left: 70%;
+  margin-top: 25%;
+}
+
+.fish_area_3 .fish3 {
+  width: 70px;
+}
+
+.fish_area_3 p {
+  margin-top: -50px;
+  margin-left: -30px;
+  opacity: 0;
+}
+
+.fish_area_4 {
+  position: absolute;
+  margin-left: 85%;
+  margin-top: 35%;
+}
+
+.fish_area_4 .fish4 {
+  width: 40px;
+}
+
+.fish_area_4 p {
+  margin-top: -60px;
+  margin-left: 30px;
+  -webkit-transform: rotate(30deg);
+          transform: rotate(30deg);
+  opacity: 0;
+}
+
+.fish_area_5 {
+  position: absolute;
+  margin-left: 85%;
+  margin-top: 25%;
+}
+
+.fish_area_5 .fish5 {
+  width: 150px;
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+}
+
+.wave1 {
+  position: absolute;
+  margin-left: 85%;
+  top: 10%;
+  width: 150px;
+}
+
+.wave2 {
+  position: absolute;
+  margin-left: 60%;
+  margin-top: 35%;
+  width: 90px;
+}
+
+.wave3 {
+  position: absolute;
+  margin-left: 55%;
+  margin-top: 38%;
+  width: 120px;
+}
+
+.fish1 {
+  -webkit-animation: shack 2s infinite;
+          animation: shack 2s infinite;
+}
+
+.fish4 {
+  -webkit-animation: move ease-out 2s;
+          animation: move ease-out 2s;
+}
+
+@-webkit-keyframes shack {
+  0% {
+    -webkit-transform: rotate(3deg);
+            transform: rotate(3deg);
+  }
+  50% {
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+  }
+  100% {
+    -webkit-transform: rotate(3deg);
+            transform: rotate(3deg);
+  }
+}
+
+@keyframes shack {
+  0% {
+    -webkit-transform: rotate(3deg);
+            transform: rotate(3deg);
+  }
+  50% {
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+  }
+  100% {
+    -webkit-transform: rotate(3deg);
+            transform: rotate(3deg);
+  }
+}
+
+@-webkit-keyframes move {
+  0% {
+    -webkit-transform: translateX(300px) rotate(360deg);
+            transform: translateX(300px) rotate(360deg);
+  }
+  100% {
+    -webkit-transform: translateX(0px) rotate(0deg);
+            transform: translateX(0px) rotate(0deg);
+  }
+}
+
+@keyframes move {
+  0% {
+    -webkit-transform: translateX(300px) rotate(360deg);
+            transform: translateX(300px) rotate(360deg);
+  }
+  100% {
+    -webkit-transform: translateX(0px) rotate(0deg);
+            transform: translateX(0px) rotate(0deg);
+  }
+}
+/*# sourceMappingURL=tour_0.css.map */
