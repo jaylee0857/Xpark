@@ -8,10 +8,16 @@ body {
 }
 
 .container {
-  max-width: 1140px;
+  width: 1140px;
+  height: 100%;
+  margin: auto;
 }
 
 .content {
+  width: 50%;
+}
+
+.pfmitem {
   width: 50%;
 }
 
@@ -19,6 +25,11 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.flex-wrap {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .mt_mb {
@@ -51,6 +62,17 @@ h1 {
 
 .tab {
   padding: 20px;
+}
+
+.cart_btn {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  text-align: center;
+  line-height: 20px;
+  margin-right: 5px;
+  border: 1px solid #26bec9;
+  border-radius: 50%;
 }
 
 .ticket {
@@ -161,11 +183,8 @@ h1 {
   font-weight: normal;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 568px) {
   .container {
-    width: 100%;
-  }
-  .content {
     width: 100%;
   }
 }

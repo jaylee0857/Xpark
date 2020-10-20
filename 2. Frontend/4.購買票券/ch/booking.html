@@ -15,324 +15,291 @@
 
 <body>
     <div id="app">
-    <section>
-        <h1>購買票券</h1>
-        <div class="container d-flex ">
-            <div class="content">
+        <section>
+            <h1>購買票券</h1>
+            <div class="container d-flex ">
+                <div class="content">
 
-                <h2>一行程特色一</h2>
-                <div class="content_text">
-                    由日本橫濱八景島首度來台開設分館 Xpark，
-                    主打新都會型水族館，驅使最先端的科技，
-                    營造出環境的溫度、濕度、氣味、聲音，
-                    帶您到地球上每個不可思議的角落，
-                    受到啟發、感受療癒、洗滌心靈。
-                    在KKday訂購電子票即可掃QRcode入園，
-                    不必排隊購票・輕鬆入場！
-                    <br>
-                    <br>
-                    <span><i class="fas fa-comment-dollar " style="padding-right: 10px;"></i>6天前可免費取消</span>
-                    <br>
-                    <br>
-                    <span><i class="fas fa-mobile-alt" style="padding-right: 15px;"></i>現場請出示 QR code</span>
-                </div>
-            </div>
-            <!-- 左邊行程特色 介紹 -->
-            <div class="pfmitem">
-                <div class="pfmcontainer">
-                    <h3 class="tab">
-                        <strong>選擇日期、場次</strong>
-                        <i class="fas fa-chevron-down" style="padding-right: 10px;"></i>&#160;</h3>
-                    <div class="tabpanel" style="display: none;">
-
-                        <h4 class="padding-left">請選擇使用日期</h4>
-                        <hr>
-                        <form action="/action_page.php">
-                            <label for="birthday" style="margin-left: 15px;"></label>
-                            <input type="date" id="birthday" name="birthday">
-
-                        </form>
-                        <ul class="nav nav-tabs" id="myTab" role="tablist">
-
-                            <li class="nav-item">
-                                <a class="nav-link  disabled" id="home-tab" data-toggle="tab" href="#home" role="tab"
-                                    aria-controls="home" aria-selected="true">10:00</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link disabled" id="profile-tab" data-toggle="tab" href="#profile"
-                                    role="tab" aria-controls="profile" aria-selected="false">12:00</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link disabled" id="contact-tab" data-toggle="tab" href="#contact"
-                                    role="tab" aria-controls="contact" aria-selected="false">14:00</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link disabled" id="contact-tab" data-toggle="tab" href="#contact"
-                                    role="tab" aria-controls="contact" aria-selected="false">16:00</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link " id="contact-tab" data-toggle="tab" href="#contact" role="tab"
-                                    aria-controls="contact" aria-selected="false"><i class="fas fa-exclamation-triangle"
-                                        style="color: rgb(251, 195, 13);"></i>18:00</a>
-
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab"
-                                    aria-controls="contact" aria-selected="false">20:00</a>
-                            </li>
-                        </ul>
-                        <div class="tab-content" id="myTabContent">
-                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                                ...</div>
-                            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...
-                            </div>
-                            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-                                <!-- 18:00 的內容 -->
-                                <h6>選擇數量</h6>
-                                <div class="ticket">
-                                    <div class="men">
-                                        <h4>成人<span>(18-64歲)</span></h4>
-                                        <div class="count">
-                                            <span>TWD 550/每人</span>
-                                            <a href="" class="cart_btn" @click='removeOne(cartItem)'>-</a>
-                                            <span>{{cartItem.quantity}}</span>
-                                            <a href="" class="cart_btn" @click='addOne(cartItem)'>+</a>
-                                            <span>元</span>
-                                        </div>
-                                    </div>
-                                    <div class="child">
-                                        <h4>兒童<span>(4-11歲以下)</span></h4>
-                                        <div class="count">
-                                            <span>TWD 250/每人</span>
-                                            <a href="" class="cart_btn" @click='removeOne(cartItem)'>-</a>
-                                            <span></span>
-                                            <a href="" class="cart_btn" @click='addOne(cartItem)'>+</a>
-                                            <span>元</span>
-                                        </div>
-                                    </div>
-                                    <div class="oldmen">
-                                        <h4>長者<span>(65歲以上)</span></h4>
-                                        <div class="count">
-                                            <span>TWD 250/每人</span>
-                                            <a href="" class="cart_btn" @click='removeOne(cartItem)'>-</a>
-                                            <span></span>
-                                            <a href="" class="cart_btn" @click='addOne(cartItem)'>+</a>
-                                            <span>元</span>
-                                        </div>
-                                    </div>
-                                    <div class="student">
-                                        <h4>學生<span>(12歲以上)</span></h4>
-                                        <div class="count">
-                                            <span>TWD 400/每人</span>
-                                            <a href="" class="cart_btn" @click='removeOne(cartItem)'>-</a>
-                                            <span></span>
-                                            <a href="" class="cart_btn" @click='addOne(cartItem)'>+</a>
-                                            <span>元</span>
-                                        </div>
-
-                                    </div>
-                                    <div class="total text-right">
-                                       <span>總共</span><span>元</span>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                        </div>
+                    <h2>一行程特色一</h2>
+                    <div class="content_text">
+                        由日本橫濱八景島首度來台開設分館 Xpark，
+                        主打新都會型水族館，驅使最先端的科技，
+                        營造出環境的溫度、濕度、氣味、聲音，
+                        帶您到地球上每個不可思議的角落，
+                        受到啟發、感受療癒、洗滌心靈。
+                        在KKday訂購電子票即可掃QRcode入園，
+                        不必排隊購票・輕鬆入場！
+                        <br>
+                        <br>
+                        <span><i class="fas fa-comment-dollar " style="padding-right: 10px;"></i>6天前可免費取消</span>
+                        <br>
+                        <br>
+                        <span><i class="fas fa-mobile-alt" style="padding-right: 15px;"></i>現場請出示 QR code</span>
                     </div>
-
                 </div>
-                <!-- 確認付款明細 start-->
+                <!-- 左邊行程特色 介紹 -->
                 <div class="pfmitem">
                     <div class="pfmcontainer">
                         <h3 class="tab">
-                            <strong>確認付款明細</strong>
-                            <i class="fas fa-chevron-down" style="padding-right: 10px;"></i></h3>
+                            <strong>選擇日期、場次</strong>
+                            <i class="fas fa-chevron-down" style="padding-right: 10px;"></i>&#160;</h3>
                         <div class="tabpanel" style="display: none;">
-                            <h4 class="padding-left">訂購人資料</h4>
+
+                            <h4 class="padding-left">請選擇使用日期</h4>
+                            
                             <hr>
-                            <form id="register_form" role="form" data-toggle="validator">
-                                <div class="form-group">
-                                    <input id="inputName" name="Name" type="text" class="form-control" placeholder="姓名"
-                                        required="required">
-                                    <div class="help-block with-errors" style="color: red;"></div>
-                                </div>
-                                <div class="form-group">
-                                    <input id="inputEmail" name="Email" class="form-control" type="email"
-                                        placeholder="電子郵件地址" data-error="郵件格式錯誤" required="required">
-                                    <div class="help-block with-errors" style="color: red;"></div>
-                                </div>
-                                <div class="form-group">
-                                    <input id="inputTel" name="Number" class="form-control" type="number"
-                                        placeholder="手機號碼" data-error="輸入格式錯誤" required="required">
-                                    <div class="help-block with-errors" style="color: red;"></div>
-                                </div>
-                                <input type="submit" value="繼續" class="btn btn-danger btn-block w-25"
-                                    style="background: #26bec9" />
+                            <form action="/action_page.php">
+                                <label for="birthday" style="margin-left: 15px;"></label>
+                                <input type="date" id="birthday" name="birthday">
+
                             </form>
-                        </div>
-                    </div>
-                    <!-- 確認付款明細 end-->
-                    <!--  填寫付款資料 start-->
-                    <div class="pfmitem">
-                        <div class="pfmcontainer ">
-                            <h3 class="tab">
-                                <strong style="padding-right: 10px;">填寫付款資料</strong><i class="fas fa-chevron-down"></i>
-                            </h3>
-                            <div class="tabpanel" style="display: none;">
-                                <div class="form-group">
-                                    <h4 class="padding-left">請選擇付款方式</h4>
-                                    <hr>
-                                    <div class="custom-control custom-radio" style="padding-left: 46px">
-                                        <input type="radio" class="custom-control-input " id="defaultGroupExample1"
-                                            name="groupOfDefaultRadios">
-                                        <label class="custom-control-label" for="defaultGroupExample1">信用卡</label>
-                                        <div class="credit">
-                                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Visa.svg/1200px-Visa.svg.png"
-                                                style="width: 10%; height: 35px;" alt="">
-                                            <img src="https://www.mastercard.com.tw/content/dam/mccom/global/logos/logo-mastercard-mobile.svg"
-                                                style="width: 10%; height: 35px;" alt="">
-                                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/JCB_logo.svg/1200px-JCB_logo.svg.png"
-                                                style="width: 10%; height: 35px;" alt="">
-                                        </div>
-                                    </div>
-                                    <hr>
-                                    <div class="ccn " style="padding-left: 20px">
-                                        <div class="form-group">
-                                            <label for="ccn">信用卡號碼</label>
-                                            <br>
-                                            <input id="ccn" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}"
-                                                autocomplete="cc-number" minlength="16" maxlength="16"
-                                                placeholder="xxxx xxxx xxxx xxxx" data-error="輸入格式錯誤"
-                                                required="required">
-                                        </div>
-                                        <label for="ccn">有效期限</label>
-                                        <input id="ccn" type="month" inputmode="numeric" pattern="[0-9\s]{13,19}"
-                                            autocomplete="cc-number" maxlength="14" placeholder="xxxx xxxx xxxx xxxx"
-                                            required="required">
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
 
-                                        <label for="ccn">CVC/CVV</label>
-                                        <input name="credit-cvc" class="cc-cvc" type="tel" pattern="\d*" maxlength="4"
-                                            placeholder="CVC">
-                                    </div>
+                                <li class="nav-item">
+                                    <a class="nav-link  disabled" id="home-tab" data-toggle="tab" href="#home"
+                                        role="tab" aria-controls="home" aria-selected="true">10:00</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link disabled" id="profile-tab" data-toggle="tab" href="#profile"
+                                        role="tab" aria-controls="profile" aria-selected="false">12:00</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link disabled" id="contact-tab" data-toggle="tab" href="#contact"
+                                        role="tab" aria-controls="contact" aria-selected="false">14:00</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link disabled" id="contact-tab" data-toggle="tab" href="#contact"
+                                        role="tab" aria-controls="contact" aria-selected="false">16:00</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link " id="contact-tab" data-toggle="tab" href="#contact" role="tab"
+                                        aria-controls="contact" aria-selected="false"><i
+                                            class="fas fa-exclamation-triangle"
+                                            style="color: rgb(251, 195, 13);"></i>18:00</a>
 
-                                    <div class="help-block with-errors" style="color: red;"></div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab"
+                                        aria-controls="contact" aria-selected="false">20:00</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="home" role="tabpanel"
+                                    aria-labelledby="home-tab">
+                                    ...</div>
+                                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                    ...
+                                </div>
+                                <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                                    <!-- 18:00 的內容 -->
                                 </div>
                             </div>
-                            <!-- 填寫付款資料 end -->
-                            <!-- 確認付款明細 -->
-                            <div class="pfmitem">
-                                <div class="pfmcontainer">
-                                    <h3 class="tab">
-                                        <strong style="padding-right: 10px;">付款明細</strong>
-                                        <i class="fas fa-chevron-down"></i></h3>
-                                    <div class="tabpanel" style="display: none;">
-                                        <div class="pay">
-                                            <div class="pay_img">
-                                                <img src="https://www.xpark.com.tw/upload/news63_cover_20201015155524.jpg"
-                                                    alt="">
+
+                            <div>
+                                <h6>選擇數量</h6>
+                                <div class="ticket">
+
+                                    <div class="men" v-for="(item,index) in sub_total_price">
+                                        <h4>{{ball[index]}}<span>({{age[index]}})</span></h4>
+                                        <div class="count">
+                                            <span>TWD {{price[index]}}/每人</span>
+                                            <button type="button" class="cart_btn" @click='dec(index)'>-</button>
+                                            <input v-model="item.price">
+                                            <button type="button" class="cart_btn" @click='inc(index)'>+</button>
+                                            <span>張</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="total text-right">
+                                        <span>總共</span>
+                                        {{sum()}}
+                                        <span>元</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 確認付款明細 start-->
+                    <div class="pfmitem">
+                        <div class="pfmcontainer">
+                            <h3 class="tab">
+                                <strong>確認付款明細</strong>
+                                <i class="fas fa-chevron-down" style="padding-right: 10px;"></i></h3>
+                            <div class="tabpanel" style="display: none;">
+                                <h4 class="padding-left">訂購人資料</h4>
+                                <hr>
+                                <form id="register_form" role="form" data-toggle="validator">
+                                    <div class="form-group">
+                                        <input id="inputName" name="Name" type="text" class="form-control"
+                                            placeholder="姓名" required="required">
+                                        <div class="help-block with-errors" style="color: red;"></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input id="inputEmail" name="Email" class="form-control" type="email"
+                                            placeholder="電子郵件地址" data-error="郵件格式錯誤" required="required">
+                                        <div class="help-block with-errors" style="color: red;"></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input id="inputTel" name="Number" class="form-control" type="number"
+                                            placeholder="手機號碼" data-error="輸入格式錯誤" required="required">
+                                        <div class="help-block with-errors" style="color: red;"></div>
+                                    </div>
+                                    <input type="submit" value="繼續" class="btn btn-danger btn-block w-25"
+                                        style="background: #26bec9" />
+                                </form>
+                            </div>
+                        </div>
+                        <!-- 確認付款明細 end-->
+                        <!--  填寫付款資料 start-->
+                        <div class="pfmitem">
+                            <div class="pfmcontainer ">
+                                <h3 class="tab">
+                                    <strong style="padding-right: 10px;">填寫付款資料</strong><i
+                                        class="fas fa-chevron-down"></i>
+                                </h3>
+                                <div class="tabpanel" style="display: none;">
+                                    <div class="form-group">
+                                        <h4 class="padding-left">請選擇付款方式</h4>
+                                        <hr>
+                                        <div class="custom-control custom-radio" style="padding-left: 46px">
+                                            <input type="radio" class="custom-control-input " id="defaultGroupExample1"
+                                                name="groupOfDefaultRadios">
+                                            <label class="custom-control-label" for="defaultGroupExample1">信用卡</label>
+                                            <div class="credit">
+                                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Visa.svg/1200px-Visa.svg.png"
+                                                    style="width: 10%; height: 35px;" alt="">
+                                                <img src="https://www.mastercard.com.tw/content/dam/mccom/global/logos/logo-mastercard-mobile.svg"
+                                                    style="width: 10%; height: 35px;" alt="">
+                                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/JCB_logo.svg/1200px-JCB_logo.svg.png"
+                                                    style="width: 10%; height: 35px;" alt="">
                                             </div>
-                                            <div class="pay_content">
-                                                <div class="pay_title">
-                                                    <span>桃園青埔|Xpark都會型水生公園門票</span>
-                                                    <br>
-                                                    <span>Xpark 入園門票</span>
-                                                    <br>
-                                                    <div class="pay_icon">
-                                                        <span><i class="far fa-calendar-alt"
-                                                                style="padding-right: 10px;"></i>2020-10-18</span>
-                                                        <span><i class="far fa-clock"
-                                                                style="padding-right: 5px;"></i></i>18:00</span>
+                                        </div>
+                                        <hr>
+                                        <div class="ccn " style="padding-left: 20px">
+                                            <div class="form-group">
+                                                <label for="ccn">信用卡號碼</label>
+                                                <br>
+                                                <input id="ccn" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}"
+                                                    autocomplete="cc-number" minlength="16" maxlength="16"
+                                                    placeholder="xxxx xxxx xxxx xxxx" data-error="輸入格式錯誤"
+                                                    required="required">
+                                            </div>
+                                            <label for="ccn">有效期限</label>
+                                            <input id="ccn" type="month" inputmode="numeric" pattern="[0-9\s]{13,19}"
+                                                autocomplete="cc-number" maxlength="14"
+                                                placeholder="xxxx xxxx xxxx xxxx" required="required">
+
+                                            <label for="ccn">CVC/CVV</label>
+                                            <input name="credit-cvc" class="cc-cvc" type="tel" pattern="\d*"
+                                                maxlength="4" placeholder="CVC">
+                                        </div>
+
+                                        <div class="help-block with-errors" style="color: red;"></div>
+                                    </div>
+                                </div>
+                                <!-- 填寫付款資料 end -->
+                                <!-- 確認付款明細 -->
+                                <div class="pfmitem">
+                                    <div class="pfmcontainer">
+                                        <h3 class="tab">
+                                            <strong style="padding-right: 10px;">付款明細</strong>
+                                            <i class="fas fa-chevron-down"></i></h3>
+                                        <div class="tabpanel" style="display: none;">
+                                            <div class="pay">
+                                                <div class="pay_img">
+                                                    <img src="https://www.xpark.com.tw/upload/news63_cover_20201015155524.jpg"
+                                                        alt="">
+                                                </div>
+                                                <div class="pay_content">
+                                                    <div class="pay_title">
+                                                        <span>桃園青埔|Xpark都會型水生公園門票</span>
+                                                        <br>
+                                                        <span>Xpark 入園門票</span>
+                                                        <br>
+                                                        <div class="pay_icon">
+                                                            <span><i class="far fa-calendar-alt"
+                                                                    style="padding-right: 10px;"></i>2020-10-18</span>
+                                                            <span><i class="far fa-clock"
+                                                                    style="padding-right: 5px;"></i></i>18:00</span>
+                                                        </div>
+                                                        <div class="pay_person">
+                                                            
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+                                    <!-- 確認付款明細 -->
                                 </div>
-                                <!-- 確認付款明細 -->
-    </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
         integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
         integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
         crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
 
     <!-- bts 表單驗證外掛 cdn -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"></script>
     <!--執行 Validator-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.3/vue.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js"></script> -->
     <!-- vue.js cdn -->
     <script>
-        $("#myForm").validator();
-    </script>
-    <script>
+        // rwd menubar
         $(document).ready(function () {
+            $("#myForm").validator();
+
             $('.tabpanel').hide();
-        });
-        $(".tab").on("click", function () {
-            $(this).find(".fas").toggleClass("fa-caret-right");
-            $(this).find(".fas").toggleClass("fa-caret-down");
-            $(this).next('.tabpanel').slideToggle("slow");
-        });</script>
-    <!-- rwd menu -->
-    <script>
-        $(document).ready(function () {
+
             $(".icon").on("click", function () {
                 $(this).next("nav").toggleClass("active");
             })
+        
+            $(".tab").on("click", function () {
+                // $(this).find(".fas").toggleClass("fa-caret-right");
+                // $(this).find(".fas").toggleClass("fa-caret-down");
+                $(this).next('.tabpanel').slideToggle("slow");
+            });
         })
-    </script>
-    <!-- vue start  -->
-     <!-- <script>       
-        new Vue({
-            el: "#app",
+
+        // vue start
+        var vm = new Vue({
+            el: '#app',
             data: {
-                price: 550,              
-                incart: [],
+                ball: ['成人票', '兒童票', '長者', '學生 '],
+                age: ['18-60', '6-8', '60-80', '-'],
+                price: [550, 250, 250, 400],
+                sub_total_price: [{ price: 0 }, { price: 0 }, { price: 0 }, { price: 0 }],
+                Total: 0
             },
             methods: {
-                 addOne: function (cartItem) {
-                    cartItem.quantity++;
-                  
+                inc(index) {
+                    this.sub_total_price[index].price = this.sub_total_price[index].price + 1;
                 },
-                removeOne: function (cartItem) {
-                    cartItem.quantity--;
-                    // 數量小於0刪除此列
-                    if (cartItem.quantity <= 0) {
-                        /*用編號找會比較麻煩，直接用物件找*/
-                        this.incart.splice(cartItem, 1);
-                    }
+                dec(index) {
+                    this.sub_total_price[index].price = this.sub_total_price[index].price - 1;
                 },
-                  removeElement: function (cartItem) {
-                    /*跟上面的splice效果相同*/
-                    this.incart.splice(cartItem);
-                }
-            },
-                
-                computed: {
-                    countTotal: function () {
-                        //設定初始金額
-                        var countTotal = 0;
-                        // 找購物車裡面全部商品
-                        for (var i in this.incart) {
-                            // 把每個商品的數量乘上單價
-                            countTotal += this.incart[i].quantity * this.incart[i].price;
-                        }
-                        // 回傳到總金額
-                        return countTotal;
-                    },
+                sum() {
+                    var sum = 0
+                    this.sub_total_price.forEach( (sub_total_price,index) => {
+                        sum = sum + sub_total_price.price * this.price[index];
+                    });
+                    return sum
+                    // return this.Total * 550;
                 }
             }
-        });
-    </script> -->
-    
-
+        })
+    </script>
 </body>
 
 </html>
