@@ -87,7 +87,7 @@ body {
   display: inline-block;
   padding-top: 30px;
   margin: 0;
-  font-size: 36px;
+  font-size: 30px;
 }
 
 .wrapper .container .title_group span {
@@ -498,7 +498,7 @@ body {
 #nav ul li a {
   text-decoration: none;
   color: #4d4d4d;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 @media (max-width: 860px) {
