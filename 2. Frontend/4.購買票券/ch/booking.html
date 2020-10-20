@@ -161,6 +161,7 @@
                                         class="fas fa-chevron-down"></i>
                                 </h3>
                                 <div class="tabpanel" style="display: none;">
+                                    <form action="">
                                     <div class="form-group">
                                         <h4 class="padding-left">請選擇付款方式</h4>
                                         <hr>
@@ -177,26 +178,37 @@
                                                     style="width: 10%; height: 35px;" alt="">
                                             </div>
                                         </div>
+                                        </form>
                                         <hr>
                                         <div class="ccn " style="padding-left: 20px">
+                                            <form action="" id="form1">
                                             <div class="form-group">
                                                 <label for="ccn">信用卡號碼</label>
                                                 <br>
+                                                <p>
                                                 <input id="ccn" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}"
                                                     autocomplete="cc-number" minlength="16" maxlength="16"
                                                     placeholder="xxxx xxxx xxxx xxxx" data-error="輸入格式錯誤"
                                                     required="required">
+                                                    </p>
                                             </div>
+                                            <p>
                                             <label for="ccn">有效期限</label>
+                                            <br>
                                             <input id="ccn" type="month" inputmode="numeric" pattern="[0-9\s]{13,19}"
                                                 autocomplete="cc-number" maxlength="14"
                                                 placeholder="xxxx xxxx xxxx xxxx" required="required">
-
+                                                </p>
+                                                <p>
                                             <label for="ccn">CVC/CVV</label>
+                                            <br>
                                             <input name="credit-cvc" class="cc-cvc" type="tel" pattern="\d*"
-                                                maxlength="4" placeholder="CVC">
+                                                maxlength="4" placeholder="CVC" id="cvc">
+                                            </p>
+                                                    <button type="submit" name="button" id="demo2" value="送出" />送出
+                                                
                                         </div>
-
+                                        </form>
                                         <div class="help-block with-errors" style="color: red;"></div>
                                     </div>
                                 </div>
@@ -299,6 +311,22 @@
             });
         })
 
+        // 填寫信用卡資料
+        $(document).ready(function () {
+            $('#button').click(function(){
+                if($("#ccn").val() ==""){
+                    alert("你尚未填信用卡資料");
+                    eval("document.form1['ccn'].focus()");
+                }else if($("#cvc").val()==""){
+                    alert("你尚未填寫CVC/CVV");
+                    eval("document.form1['cvc'].focus()");
+                }else{
+                     document.form1.submit();
+                }
+            })
+        });
+
+        
         // vue start
         var vm = new Vue({
             el: '#app',
@@ -331,6 +359,8 @@
         document.getElementById("demo1").addEventListener("click", function () {
             swal("付款完成!", "You clicked the button!", "success");
         });
+
+        
         // sweetAlert
       
     </script>
