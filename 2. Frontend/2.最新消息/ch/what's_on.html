@@ -4,7 +4,7 @@
 <head>
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" href="/css/what's_on.css">
+     <link rel="stylesheet" href="css/what's_on.css">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
      <!-- Link Swiper's CSS -->
      <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
@@ -91,7 +91,7 @@
                               <div class="img"><img src="img/news_penguin_born.jpg" alt=""></div>
                               <div class="text">
                                    <p>
-                                        企鵝仙女乾媽們說，非常驚喜也感到很意外，蒲公英(母)跟☘️三葉草(父)誕下新生命，小企鵝於2020年6月22日出生，體重100公克，出生兩個月之後體重已經到了3.65公斤。
+                                        企鵝仙女乾媽們說，非常驚喜也感到很意外，蒲公英(母)跟三葉草(父)誕下新生命，小企鵝於2020年6月22日出生，體重100公克，出生兩個月之後體重已經到了3.65公斤。
                                         據乾媽的觀察表示，小企鵝應該是男生，也是一個非常有膽量的好奇寶寶，第一天下水隔天就跑到對面的水域去玩耍，父母親目前都還未真的到對面去，做到了連成年企鵝都很難做到的事情。
                                    </p>
                               </div>
@@ -176,12 +176,12 @@
      <div id="nav">
           <i class="bars fas fa-bars"></i>
           <ul>
-               <li><a href="#"><img class="bubble" src="/svg/bubble.svg" alt="">最新消息</a></li>
-               <li><a href="#"><img class="bubble" src="/svg/bubble.svg" alt="">館內介紹</a></li>
-               <li><a href="#"><img class="bubble" src="/svg/bubble.svg" alt="">購買票券 </a></li>
-               <li><a href="#"><img class="bubble" src="/svg/bubble.svg" alt="">紀念品店</a></li>
-               <li><a href="#"><img class="bubble" src="/svg/bubble.svg" alt="">關於Xpark</a></li>
-               <li><a href="#"><img class="bubble" src="/svg/bubble.svg" alt="">常見問題</a></li>
+               <li><a href="#"><img class="bubble" src="svg/bubble.svg" alt="">最新消息</a></li>
+               <li><a href="#"><img class="bubble" src="svg/bubble.svg" alt="">館內介紹</a></li>
+               <li><a href="#"><img class="bubble" src="svg/bubble.svg" alt="">購買票券 </a></li>
+               <li><a href="#"><img class="bubble" src="svg/bubble.svg" alt="">紀念品店</a></li>
+               <li><a href="#"><img class="bubble" src="svg/bubble.svg" alt="">關於Xpark</a></li>
+               <li><a href="#"><img class="bubble" src="svg/bubble.svg" alt="">常見問題</a></li>
                <li><a href="#">CH/</a><a href="">EN</a></li>
                <li>
                     <a href=""><i class="fab fa-facebook"></i></a>
@@ -190,10 +190,10 @@
           </ul>
      </div>
      <!-- sea urchin svg -->
-     <img class="sea_life" src="/svg/sea life.svg" alt="">
+     <img class="sea_life" src="svg/sea life.svg" alt="">
 
      <!-- ugly_fish -->
-     <img class="ugly_fish" src="/svg/ugly_fish.svg" alt="">
+     <img class="ugly_fish" src="svg/ugly_fish.svg" alt="">
      <div class="ugly_fish_text">小時候一定要讀書</div>
 
 
@@ -216,6 +216,7 @@
           tab1.classList.add("active")
           news.classList.add("active")
 
+          //切換新聞報導與近期活動頁面
           for (let index = 0; index < btns.length; index++) {
                const btn = btns[index];
                const content = contents[index]
@@ -228,6 +229,11 @@
                     
                }
 
+          //展開與收合新聞內容
+          icons[0].classList.add('fa-plus-circle')
+          news_infos[0].classList.add('active')
+
+          
           for (let index = 0; index < icons.length; index++) {
                     const icon = icons[index];
                     const news_info = news_infos[index]
@@ -239,7 +245,8 @@
                     }
                }
 
-               for (let index = 0; index < swipers.length; index++) {
+          //swiper內點擊近期活動開啟與收和活動內容
+          for (let index = 0; index < swipers.length; index++) {
                     const swiper = swipers[index];
                     const activities_info = activities_infos[index];
 
@@ -249,7 +256,7 @@
                     }
                }
 
-               for (let index = 0; index < activities_infos.length; index++) {
+          for (let index = 0; index < activities_infos.length; index++) {
                     const activities_info = activities_infos[index];
                     const clear = clears[index];
 
