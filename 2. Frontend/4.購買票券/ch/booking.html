@@ -46,7 +46,7 @@
                         <div class="tabpanel" style="display: none;">
 
                             <h4 class="padding-left">請選擇使用日期</h4>
-                            
+
                             <hr>
                             <form action="/action_page.php">
                                 <label for="birthday" style="margin-left: 15px;"></label>
@@ -104,12 +104,12 @@
                                         <div class="count">
                                             <span>TWD {{price[index]}}/每人</span>
                                             <button type="button" class="cart_btn" @click='dec(index)'>-</button>
-                                            <input v-model="item.price">
+                                            <input v-model="item.price" size="1" style="text-align: center;">
                                             <button type="button" class="cart_btn" @click='inc(index)'>+</button>
                                             <span>張</span>
                                         </div>
                                     </div>
-                                    
+
                                     <div class="total text-right">
                                         <span>總共</span>
                                         {{sum()}}
@@ -222,22 +222,43 @@
                                                             <span><i class="far fa-clock"
                                                                     style="padding-right: 5px;"></i></i>18:00</span>
                                                         </div>
-                                                        <div class="pay_person">
-                                                            
+
+                                                        <ul>
+                                                            <li v-for="(item,index) in sub_total_price"
+                                                                v-if="item.price!=0">
+                                                                <div>{{ball[index]}} x {{item.price}} <span>張</span>
+                                                                </div>
+                                                            </li>
+                                                            <hr>
+                                                            <!-- {{item.price*price[index]}}  這是用來顯示金額的-->
+                                                        </ul>
+                                                        <br>
+                                                        <div class="allTotal">
+                                                            <br>
+
+                                                            <p>{{sum()}}<span>元</span></p>
+
                                                         </div>
+                                                        <hr>
+                                                        <div class="pay_btn"> <button type="submit" id="demo1"
+                                                                 class="payMoney">付款</button>
+                                                        </div>
+
+
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- 確認付款明細 -->
                                 </div>
+                                <!-- 確認付款明細 -->
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+    </div>
+    </section>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
@@ -254,6 +275,9 @@
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js"></script> -->
     <!-- vue.js cdn -->
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- sweetAlert -->
     <script>
         // rwd menubar
         $(document).ready(function () {
@@ -264,7 +288,7 @@
             $(".icon").on("click", function () {
                 $(this).next("nav").toggleClass("active");
             })
-        
+
             $(".tab").on("click", function () {
                 // $(this).find(".fas").toggleClass("fa-caret-right");
                 // $(this).find(".fas").toggleClass("fa-caret-down");
@@ -276,7 +300,7 @@
         var vm = new Vue({
             el: '#app',
             data: {
-                ball: ['成人票', '兒童票', '長者', '學生 '],
+                ball: ['成人', '兒童', '長者', '學生 '],
                 age: ['18-60', '6-8', '60-80', '-'],
                 price: [550, 250, 250, 400],
                 sub_total_price: [{ price: 0 }, { price: 0 }, { price: 0 }, { price: 0 }],
@@ -291,7 +315,7 @@
                 },
                 sum() {
                     var sum = 0
-                    this.sub_total_price.forEach( (sub_total_price,index) => {
+                    this.sub_total_price.forEach((sub_total_price, index) => {
                         sum = sum + sub_total_price.price * this.price[index];
                     });
                     return sum
@@ -299,6 +323,13 @@
                 }
             }
         })
+
+
+        document.getElementById("demo1").addEventListener("click", function () {
+            swal("付款完成!", "You clicked the button!", "success");
+        });
+        // sweetAlert
+      
     </script>
 </body>
 
