@@ -83,7 +83,7 @@ body {
 
 .wrapper .container .title_group .title_box #title_news {
   display: inline-block;
-  padding-top: 30px;
+  padding-top: 80px;
   margin: 0;
   font-size: 30px;
 }
@@ -129,10 +129,17 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  margin-top: 10px;
   width: 100%;
   height: 100%;
   background-color: #bfdedc;
+}
+
+.wrapper .container .content .content_group#news {
+  margin-top: 50px;
+}
+
+.wrapper .container .content .content_group#activies {
+  margin-top: 0px;
 }
 
 .wrapper .container .content .content_group .news_list {
@@ -680,9 +687,8 @@ body {
   display: inline-block;
   top: 50px;
   right: 70px;
-  font-weight: 400;
-  color: #4d4d4d;
-  font-size: 12px;
+  font-weight: 500;
+  font-size: 14px;
 }
 
 @media (max-width: 768px) {
