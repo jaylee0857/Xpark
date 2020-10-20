@@ -25,32 +25,35 @@ html, body {
 
 .left {
   position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  margin-left: 12%;
+  top: 25%;
+  left: 10%;
+  width: 40%;
 }
 
-.left .floor_1f {
-  width: 600px;
+.left .floor_f {
+  width: 90%;
 }
 
 .left .floors {
-  margin-top: 20px;
+  top: 20px;
   text-align: center;
 }
 
 .left .floors .f_1, .left .floors .f_2, .left .floors .f_3 {
   width: 80px;
-  margin: 20px 5px;
+  left: 50%;
+  padding: 20px 10px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   cursor: pointer;
 }
 
 .right {
   position: absolute;
-  width: 600px;
-  margin-left: 55%;
-  margin-top: 10%;
+  width: 40%;
+  left: 55%;
+  top: 20%;
+  cursor: pointer;
 }
 
 .right .swiper-slide {
@@ -87,4 +90,17 @@ html, body {
   padding: 20px;
   letter-spacing: 1px;
 }
-/*# sourceMappingURL=tour_1F.css.map */
+
+@media screen and (max-width: 576px) {
+  body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .left {
+    position: absolute;
+    top: 20%;
+    left: 12%;
+  }
+}
+/*# sourceMappingURL=tour_F.css.map */

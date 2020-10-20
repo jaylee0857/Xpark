@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <section>
+    <section id="tour_0">
 
         <h1 class="title">館內導覽</h1>
         <img class="title_wave" src="./material/waves/wave-34.svg" alt="">
@@ -26,33 +26,36 @@
             </div>
         </div>
 
-        <div class="fish_area_1">
-            <img class="fish1" src="./material/lifes/life-01.svg" alt="" />
-            <p class="area"></p>
+        <div class="right">
+            <div class="fish_area_1">
+                <img class="fish1" src="./material/lifes/life-01.svg" alt="" />
+                <p class="area"></p>
+            </div>
+
+            <div class="fish_area_2">
+                <img class="fish2" src="./material/lifes/life-02.svg" alt="" />
+                <p>：3</p>
+            </div>
+
+            <div class="fish_area_3">
+                <img class="fish3" src="./material/lifes/life-03.svg" alt="" />
+                <p>...</p>
+            </div>
+
+            <div class="fish_area_4">
+                <img class="fish4" src="./material/lifes/life-04.svg" alt="" />
+                <p>？？</p>
+            </div>
+
+            <div class="fish_area_5">
+                <img class="fish5" src="./material/lifes/life-05.svg" alt="" />
+            </div>
+
+            <img class="wave1" src="./material/waves/wave-33.svg" alt="">
+            <img class="wave2" src="./material/waves/wave-34.svg" alt="">
+            <img class="wave3" src="./material/waves/wave-35.svg" alt="">
         </div>
 
-        <div class="fish_area_2">
-            <img class="fish2" src="./material/lifes/life-02.svg" alt="" />
-            <p>：3</p>
-        </div>
-
-        <div class="fish_area_3">
-            <img class="fish3" src="./material/lifes/life-03.svg" alt="" />
-            <p>...</p>
-        </div>
-
-        <div class="fish_area_4">
-            <img class="fish4" src="./material/lifes/life-04.svg" alt="" />
-            <p>？？</p>
-        </div>
-
-        <div class="fish_area_5">
-            <img class="fish5" src="./material/lifes/life-05.svg" alt="" />
-        </div>
-
-        <img class="wave1" src="./material/waves/wave-33.svg" alt="">
-        <img class="wave2" src="./material/waves/wave-34.svg" alt="">
-        <img class="wave3" src="./material/waves/wave-35.svg" alt="">
 
     </section>
 
@@ -60,37 +63,37 @@
 
 
 
-    <script src="node_modules/jquery/dist/jquery.min.js" ></script>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
 
     <!-- page JS -->
     <script>
 
-        setTimeout(function(){
-            $(".fish_area_2 p").css("opacity","1");
-        },1500);
-        setTimeout(function(){
-            $(".fish_area_3 p").css("opacity","1");
-        },2000);
-        setTimeout(function(){
-            $(".fish_area_4 p").css("opacity","1");
-        },2500);
+        setTimeout(function () {
+            $(".fish_area_2 p").css("opacity", "1");
+        }, 1500);
+        setTimeout(function () {
+            $(".fish_area_3 p").css("opacity", "1");
+        }, 2500);
+        setTimeout(function () {
+            $(".fish_area_4 p").css("opacity", "1");
+        }, 3000);
 
-        $(".f_1").hover(function(){
-          $(this).attr("src","./material/floors/tour_0/floor-04.svg")
-          $(".f_2").attr("src","./material/floors/tour_0/floor-02.svg")
-          $(".f_3").attr("src","./material/floors/tour_0/floor-03.svg")
+        $(".f_1").hover(function () {
+            $(this).attr("src", "./material/floors/tour_0/floor-04.svg")
+            $(".f_2").attr("src", "./material/floors/tour_0/floor-02.svg")
+            $(".f_3").attr("src", "./material/floors/tour_0/floor-03.svg")
         })
 
-        $(".f_2").hover(function(){
-          $(this).attr("src","./material/floors/tour_0/floor-05.svg")
-          $(".f_1").attr("src","./material/floors/tour_0/floor-01.svg")
-          $(".f_3").attr("src","./material/floors/tour_0/floor-03.svg")
+        $(".f_2").hover(function () {
+            $(this).attr("src", "./material/floors/tour_0/floor-05.svg")
+            $(".f_1").attr("src", "./material/floors/tour_0/floor-01.svg")
+            $(".f_3").attr("src", "./material/floors/tour_0/floor-03.svg")
         })
 
-        $(".f_3").hover(function(){
-          $(this).attr("src","./material/floors/tour_0/floor-06.svg")
-          $(".f_1").attr("src","./material/floors/tour_0/floor-01.svg")
-          $(".f_2").attr("src","./material/floors/tour_0/floor-02.svg")
+        $(".f_3").hover(function () {
+            $(this).attr("src", "./material/floors/tour_0/floor-06.svg")
+            $(".f_1").attr("src", "./material/floors/tour_0/floor-01.svg")
+            $(".f_2").attr("src", "./material/floors/tour_0/floor-02.svg")
         })
 
         var app;

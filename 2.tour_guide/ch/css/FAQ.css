@@ -173,8 +173,8 @@ html, body {
   top: 10%;
   left: 32%;
   position: absolute;
-  -webkit-animation: swim 2s -0.5s infinite;
-          animation: swim 2s -0.5s infinite;
+  -webkit-animation: breath 2s -0.5s infinite;
+          animation: breath 2s -0.5s infinite;
 }
 
 .fish_4 {
@@ -182,8 +182,8 @@ html, body {
   top: 16%;
   left: 40%;
   position: absolute;
-  -webkit-animation: swim 2s infinite;
-          animation: swim 2s infinite;
+  -webkit-animation: breath 2s infinite;
+          animation: breath 2s infinite;
 }
 
 .fish_5 {
@@ -198,11 +198,11 @@ html, body {
   top: 17%;
   left: 80%;
   position: absolute;
-  -webkit-animation: move 3s infinite;
-          animation: move 3s infinite;
+  -webkit-animation: move 4s infinite;
+          animation: move 4s infinite;
 }
 
-@-webkit-keyframes swim {
+@-webkit-keyframes breath {
   0% {
     -webkit-transform: scaleY(1);
             transform: scaleY(1);
@@ -217,7 +217,7 @@ html, body {
   }
 }
 
-@keyframes swim {
+@keyframes breath {
   0% {
     -webkit-transform: scaleY(1);
             transform: scaleY(1);
