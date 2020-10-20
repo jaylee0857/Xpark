@@ -101,7 +101,7 @@ body {
 
 .wrapper .container .title_group span .tab-btn {
   padding: 0 20px;
-  font-weight: 700;
+  font-weight: 500;
   color: #666666;
 }
 
@@ -147,7 +147,7 @@ body {
   width: 30%;
   height: 40px;
   background-color: white;
-  font-weight: 500;
+  font-weight: 400;
   border-radius: 5px;
 }
 
@@ -667,7 +667,7 @@ body {
   display: inline-block;
   top: 50px;
   right: 70px;
-  font-weight: 900;
+  font-weight: 400;
   color: #4d4d4d;
   font-size: 12px;
 }

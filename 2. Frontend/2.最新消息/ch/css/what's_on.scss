@@ -81,7 +81,7 @@ body {
 
         .tab-btn {
           padding: 0 20px;
-          font-weight: 700;
+          font-weight: 500;
           color: $light_grey;
 
           &:hover {
@@ -118,7 +118,7 @@ body {
           width: 30%;
           height: 40px;
           background-color: $white;
-          font-weight: 500;
+          font-weight: 400;
           border-radius: 5px;
           @media (max-width: 1140px) {
             height: 60px;
@@ -518,7 +518,7 @@ body {
   display: inline-block;
   top: 50px;
   right: 70px;
-  font-weight: 900;
+  font-weight: 400;
   color: $grey;
   font-size: 12px;
   @media (max-width: 768px) {
