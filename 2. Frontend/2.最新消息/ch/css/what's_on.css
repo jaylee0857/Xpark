@@ -16,7 +16,7 @@ body {
 
 #logo {
   position: absolute;
-  top: 40px;
+  top: 35px;
   left: 60px;
   width: 70px;
   height: 70px;
@@ -87,7 +87,7 @@ body {
   display: inline-block;
   padding-top: 30px;
   margin: 0;
-  font-size: 36px;
+  font-size: 30px;
 }
 
 .wrapper .container .title_group span {
@@ -101,7 +101,7 @@ body {
 
 .wrapper .container .title_group span .tab-btn {
   padding: 0 20px;
-  font-weight: 700;
+  font-weight: 500;
   color: #666666;
 }
 
@@ -131,6 +131,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
+  margin-top: 10px;
   width: 100%;
   height: 100%;
   background-color: #bfdedc;
@@ -147,7 +148,7 @@ body {
   width: 30%;
   height: 40px;
   background-color: white;
-  font-weight: 500;
+  font-weight: 400;
   border-radius: 5px;
 }
 
@@ -328,9 +329,23 @@ body {
   max-height: 220px;
 }
 
+.wrapper .container .content #activities .swiper-container .swiper-wrapper .event_title {
+  font-size: 20px;
+}
+
+.wrapper .container .content #activities .swiper-container .swiper-wrapper .event_date {
+  font-size: 12px;
+  color: #555;
+}
+
 .wrapper .container .content #activities .swiper-container .swiper-wrapper p {
-  text-align: center;
+  padding-left: 10px;
+  text-align: left;
   opacity: 0;
+  font-size: 16px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 700px;
 }
 
 .wrapper .container .content #activities .swiper-container .swiper-wrapper .img {
@@ -498,7 +513,7 @@ body {
 #nav ul li a {
   text-decoration: none;
   color: #4d4d4d;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 @media (max-width: 860px) {
@@ -619,7 +634,7 @@ body {
 .ugly_fish {
   position: absolute;
   width: 200px;
-  top: 50px;
+  top: 70px;
   right: 60px;
   z-index: 0;
   -webkit-animation-name: moveforward;
@@ -628,6 +643,8 @@ body {
           animation-duration: 2s;
   -webkit-animation-direction: alternate;
           animation-direction: alternate;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 
 @media (max-width: 768px) {
@@ -638,25 +655,25 @@ body {
 
 @-webkit-keyframes moveforward {
   0% {
-    right: 60px;
+    right: 70px;
   }
   50% {
-    right: 65px;
+    right: 75px;
   }
   100% {
-    right: 70px;
+    right: 80px;
   }
 }
 
 @keyframes moveforward {
   0% {
-    right: 60px;
+    right: 70px;
   }
   50% {
-    right: 65px;
+    right: 75px;
   }
   100% {
-    right: 70px;
+    right: 80px;
   }
 }
 
@@ -665,7 +682,7 @@ body {
   display: inline-block;
   top: 50px;
   right: 70px;
-  font-weight: 900;
+  font-weight: 400;
   color: #4d4d4d;
   font-size: 12px;
 }

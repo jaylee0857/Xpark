@@ -13,6 +13,7 @@
 </head>
 
 <body>
+     <div id="logo"><img src="img/logo/xpark_logo.png" alt=""></div>
      <div class="wrapper">
           <div class="container">
                <div class="title_group">
@@ -91,7 +92,7 @@
                               <div class="img"><img src="img/news_penguin_born.jpg" alt=""></div>
                               <div class="text">
                                    <p>
-                                        企鵝仙女乾媽們說，非常驚喜也感到很意外，蒲公英(母)跟☘️三葉草(父)誕下新生命，小企鵝於2020年6月22日出生，體重100公克，出生兩個月之後體重已經到了3.65公斤。
+                                        企鵝仙女乾媽們說，非常驚喜也感到很意外，蒲公英(母)跟三葉草(父)誕下新生命，小企鵝於2020年6月22日出生，體重100公克，出生兩個月之後體重已經到了3.65公斤。
                                         據乾媽的觀察表示，小企鵝應該是男生，也是一個非常有膽量的好奇寶寶，第一天下水隔天就跑到對面的水域去玩耍，父母親目前都還未真的到對面去，做到了連成年企鵝都很難做到的事情。
                                    </p>
                               </div>
@@ -103,23 +104,23 @@
                          <div class="swiper-container">
                               <div class="swiper-wrapper">
                                    <div class="swiper-slide">
-                                        <p>Xpark麥哲倫家有喜事，小企鵝健康誕生！邀請你一起幫小企鵝取名，有機會拿到Xpark專屬小禮物！</p>
+                                        <p><b class="event_title">小企鵝誕生</b><br>Xpark麥哲倫家有喜事，小企鵝健康誕生！邀請你一起幫小企鵝取名，有機會拿到Xpark專屬小禮物！</br><b class="event_date">2020.10.20</b></p>
                                         <div class="img"><img src="img/events_penguin.jpg" alt=""></div>
                                    </div>
                                    <div class="swiper-slide">
-                                        <p>期間限定開催！Xpark夜間入場獨享浪漫企鵝戀人拿鐵</p>
+                                        <p><b class="event_title">浪漫特調咖啡</b><br>期間限定開催！Xpark夜間入場獨享浪漫企鵝戀人拿鐵</br><b class="event_date">2020.10.10</b></p>
                                         <div class="img"><img src="img/events_coffee.jpg" alt=""></div>
                                    </div>
                                    <div class="swiper-slide">
-                                        <p>海洋因塑（素）聯合展</p>
+                                        <p><b class="event_title">當季特展</b><br>海洋因塑（素）聯合展</br><b class="event_date">2020.10.01</b></p>
                                         <div class="img"><img src="img/events_plastic.png" alt=""></div>
                                    </div>
                                    <div class="swiper-slide">
-                                        <p>海洋生態攝影巡迴展</p>
+                                        <p><b class="event_title">當季特展</b><br>海洋生態攝影巡迴展</br><b class="event_date">2020.9.20</b></p>
                                         <div class="img"><img src="img/events_sea.jpg" alt=""></div>
                                    </div>
                                    <div class="swiper-slide">
-                                        <p>台灣獨創「Xpark x UNIQLO T恤入場券」歡慶Xpark開幕！</p>
+                                        <p><b class="event_title">我們開幕囉!</b><br>台灣獨創「Xpark x UNIQLO T恤入場券」歡慶Xpark開幕！</br><b class="event_date">2020.10.10</b></p>
                                         <div class="img"><img src="img/event_uniqlo.jpg" alt=""></div>
                                    </div>
                               </div>
@@ -216,6 +217,7 @@
           tab1.classList.add("active")
           news.classList.add("active")
 
+          //切換新聞報導與近期活動頁面
           for (let index = 0; index < btns.length; index++) {
                const btn = btns[index];
                const content = contents[index]
@@ -228,6 +230,11 @@
                     
                }
 
+          //展開與收合新聞內容
+          icons[0].classList.add('fa-plus-circle')
+          news_infos[0].classList.add('active')
+
+          
           for (let index = 0; index < icons.length; index++) {
                     const icon = icons[index];
                     const news_info = news_infos[index]
@@ -239,7 +246,8 @@
                     }
                }
 
-               for (let index = 0; index < swipers.length; index++) {
+          //swiper內點擊近期活動開啟與收和活動內容
+          for (let index = 0; index < swipers.length; index++) {
                     const swiper = swipers[index];
                     const activities_info = activities_infos[index];
 
@@ -249,7 +257,7 @@
                     }
                }
 
-               for (let index = 0; index < activities_infos.length; index++) {
+          for (let index = 0; index < activities_infos.length; index++) {
                     const activities_info = activities_infos[index];
                     const clear = clears[index];
 
