@@ -51,6 +51,7 @@ body
     [class^=btn]
         width: 80px
         margin-bottom: 40px
+        cursor: pointer
         &:hover
             background-color: #333
 
@@ -73,3 +74,18 @@ body
 
 
 /*# sourceMappingURL=index.css.map
+
+
+@media screen and (max-width: 576px)
+    .title
+        width: 400px
+        top: 75%
+        left: 50%
+        transform: translateX(-50%)
+    .painting
+        display: none
+
+    .nav_bar
+        right: 3%
+        top: 15%
+        [class^=btn]

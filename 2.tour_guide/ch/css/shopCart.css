@@ -1,7 +1,6 @@
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 0;
   margin: 0;
   font-family: source-han-sans-traditional, sans-serif;
 }
@@ -14,9 +13,10 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-width: 1240px;
+  max-width: 1500px;
   margin: 0 auto;
   cursor: pointer;
+  padding: 10px;
 }
 
 #tabGroup .gift, #tabGroup .essential {
@@ -42,7 +42,7 @@ body {
 }
 
 .page {
-  max-width: 1240px;
+  max-width: 1500px;
   padding-top: 50px;
   margin: 0 auto;
 }
@@ -79,6 +79,10 @@ body {
 
 .swiper-container .swiper-wrapper .swiper-slide p {
   padding: 10px 0px;
+}
+
+.swiper-container .swiper-wrapper .swiper-slide .more {
+  padding: 10px;
 }
 
 .arrowBox {
@@ -129,5 +133,17 @@ body {
 
 .fish_area_2 p {
   font-weight: 600;
+}
+
+@media screen and (max-width: 576px) {
+  body {
+    padding-top: 20px;
+  }
+  .page {
+    padding-top: 10px;
+  }
+  .swiper-slide {
+    padding: 0 10px;
+  }
 }
 /*# sourceMappingURL=shopCart.css.map */
