@@ -1,6 +1,7 @@
 *
+    font-family: source-han-sans-traditional, sans-serif
     // border: solid 1px black
-//     box-sizing: border-box
+    box-sizing: border-box
 
 html,body
     margin: 0
@@ -25,26 +26,24 @@ html,body
 .left
     position: absolute
     top: 25%
-    left: 10%
+    left: 7%
     width: 40%
     .floor_f
-        width: 90%
+        width: 100%
     .floors
         top: 20px
-        text-align: center
-        .f_1,.f_2,.f_3
-            width: 80px
-            left: 50%
-            padding: 20px 10px
-            transform: translateX(-50%)
+        display: flex
+        justify-content: center
+        width: 100%
+        .img
+            padding: 10px 15px
             cursor: pointer
 
-
-.right
+.guided
     position: absolute
-    width: 40%
+    width: 35%
     left: 55%
-    top: 20%
+    top: 25%
     cursor: pointer
     .swiper-slide
         text-align: center
@@ -63,12 +62,19 @@ html,body
             padding: 20px
             letter-spacing: 1px
 
-
 @media screen and (max-width: 576px)
-    body 
-        display: flex
-
     .left
         position: absolute
-        top: 20%
-        left: 12%
+        top: 2%
+        width: 90%
+        left: 50%
+        transform: translateX(-50%)
+        .f_1,.f_2,.f_3
+ 
+    .guided
+        width: 80%
+        position: absolute
+        top: 52%
+        left: 50%
+        transform: translateX(-50%)
+        width: 90%

@@ -1,3 +1,9 @@
+* {
+  font-family: source-han-sans-traditional, sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 html, body {
   margin: 0;
   width: 100%;
@@ -26,37 +32,39 @@ html, body {
 .left {
   position: absolute;
   top: 25%;
-  left: 10%;
+  left: 7%;
   width: 40%;
 }
 
 .left .floor_f {
-  width: 90%;
+  width: 100%;
 }
 
 .left .floors {
   top: 20px;
-  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
 }
 
-.left .floors .f_1, .left .floors .f_2, .left .floors .f_3 {
-  width: 80px;
-  left: 50%;
-  padding: 20px 10px;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+.left .floors .img {
+  padding: 10px 15px;
   cursor: pointer;
 }
 
-.right {
+.guided {
   position: absolute;
-  width: 40%;
+  width: 35%;
   left: 55%;
-  top: 20%;
+  top: 25%;
   cursor: pointer;
 }
 
-.right .swiper-slide {
+.guided .swiper-slide {
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -73,34 +81,41 @@ html, body {
           flex-direction: column;
 }
 
-.right .swiper-slide h3 {
+.guided .swiper-slide h3 {
   margin: 10px;
 }
 
-.right .swiper-slide img {
+.guided .swiper-slide img {
   width: 100%;
 }
 
-.right .swiper-slide h4 {
+.guided .swiper-slide h4 {
   margin-bottom: -10px;
 }
 
-.right .swiper-slide p {
+.guided .swiper-slide p {
   margin: 0;
   padding: 20px;
   letter-spacing: 1px;
 }
 
 @media screen and (max-width: 576px) {
-  body {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
   .left {
     position: absolute;
-    top: 20%;
-    left: 12%;
+    top: 2%;
+    width: 90%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  .guided {
+    width: 80%;
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    width: 90%;
   }
 }
 /*# sourceMappingURL=tour_F.css.map */
