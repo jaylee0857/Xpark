@@ -1,0 +1,106 @@
+html, body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f2f2f2;
+}
+
+.title {
+  font-size: 26px;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  margin-top: 5%;
+}
+
+.title_wave {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%) scale(-1);
+          transform: translateX(-50%) scale(-1);
+  margin-top: 7%;
+  width: 120px;
+}
+
+.left {
+  position: absolute;
+  top: 25%;
+  left: 10%;
+  width: 40%;
+}
+
+.left .floor_f {
+  width: 90%;
+}
+
+.left .floors {
+  top: 20px;
+  text-align: center;
+}
+
+.left .floors .f_1, .left .floors .f_2, .left .floors .f_3 {
+  width: 80px;
+  left: 50%;
+  padding: 20px 10px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  cursor: pointer;
+}
+
+.right {
+  position: absolute;
+  width: 40%;
+  left: 55%;
+  top: 20%;
+  cursor: pointer;
+}
+
+.right .swiper-slide {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.right .swiper-slide h3 {
+  margin: 10px;
+}
+
+.right .swiper-slide img {
+  width: 100%;
+}
+
+.right .swiper-slide h4 {
+  margin-bottom: -10px;
+}
+
+.right .swiper-slide p {
+  margin: 0;
+  padding: 20px;
+  letter-spacing: 1px;
+}
+
+@media screen and (max-width: 576px) {
+  body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .left {
+    position: absolute;
+    top: 20%;
+    left: 12%;
+  }
+}
+/*# sourceMappingURL=tour_F.css.map */
