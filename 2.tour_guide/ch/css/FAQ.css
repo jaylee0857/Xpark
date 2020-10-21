@@ -101,6 +101,54 @@ html, body {
   border-radius: 5px;
 }
 
+.dialog .dialogBox {
+  height: 380px;
+  padding: 30px 30px;
+  overflow: scroll;
+}
+
+.dialog .dialogBox::-webkit-scrollbar {
+  display: none;
+}
+
+.dialog .dialogBox .dia_area_1 {
+  position: relative;
+}
+
+.dialog .dialogBox .dia_area_1 .dia_1 {
+  width: 90px;
+}
+
+.dialog .dialogBox .dia_area_1 .block_1 {
+  background-color: #c7b299;
+  display: inline-block;
+  padding: 10px;
+  border-radius: 5px;
+  position: absolute;
+  top: 0px;
+  left: 85px;
+}
+
+.dialog .dialogBox .dia_area_2 {
+  position: relative;
+}
+
+.dialog .dialogBox .dia_area_2 .dia_2 {
+  width: 90px;
+  margin-top: 20px;
+  margin-left: 75%;
+}
+
+.dialog .dialogBox .dia_area_2 .block_2 {
+  background-color: #c7b299;
+  display: inline-block;
+  padding: 10px;
+  border-radius: 5px;
+  position: absolute;
+  top: 28px;
+  right: 95px;
+}
+
 .dialog input {
   position: absolute;
   bottom: 0px;
@@ -120,38 +168,6 @@ html, body {
 
 .dialog i:hover {
   color: grey;
-}
-
-.dialog .dia_1 {
-  width: 90px;
-  margin-top: 30px;
-  margin-left: 20px;
-}
-
-.dialog .block_1 {
-  background-color: #c7b299;
-  display: inline-block;
-  padding: 10px;
-  border-radius: 5px;
-  position: absolute;
-  margin-left: -5px;
-  top: 35px;
-}
-
-.dialog .dia_2 {
-  width: 90px;
-  margin-top: 20px;
-  margin-left: 75%;
-}
-
-.dialog .block_2 {
-  background-color: #c7b299;
-  display: inline-block;
-  padding: 10px;
-  border-radius: 5px;
-  position: absolute;
-  margin-left: -38%;
-  margin-top: 7%;
 }
 
 .fish_1 {
