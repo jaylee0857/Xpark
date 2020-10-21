@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <!-- page css -->
-        <link rel="stylesheet" href="./css/FAQ.css">
-        <!-- swiper -->
-        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-        <!-- font-awesome -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
-    </head>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- page css -->
+    <link rel="stylesheet" href="./css/FAQ.css">
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+</head>
+
 <body>
     <section>
         <h1 class="title">FAQ</h1>
@@ -97,20 +99,17 @@
 
         </div>
         <div class="dialog">
-
-            <div class="dia_area_1">
-                <img class="dia_1" src="./material/FAQ/dialog-07.svg" alt="">
-                <div class="block_1">ㄝ...我有其他問題？</div>
+            <div class="dialogBox">
+                <div class="dia_area_1">
+                    <img class="dia_1" src="./material/FAQ/dialog-07.svg" alt="">
+                    <div class="block_1">有其他問題？提問來幫您解決 <br>ヽ༼⊙_⊙༽ﾉ</div>
+                </div>
+                
             </div>
-
-            <div class="dia_area_2">
-                <img class="dia_2" src="./material/FAQ/dialog-08.svg" alt="">
-                <div class="block_2">...= =？</div>
+            <div id="issueBox">
+                <input id="issue" type="text" placeholder="你ㄉ問題??">
+                <i class="fas fa-reply"></i>
             </div>
-
-            <input type="text" placeholder="你ㄉ問題??">
-            <i class="fas fa-reply"></i>
-
         </div>
 
 
@@ -125,40 +124,73 @@
     </section>
 
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-      <!-- Initialize Swiper -->
+    <!-- Initialize Swiper -->
     <script src="./node_modules/jquery/dist/jquery.min.js"></script>
     <script>
 
-        $("#l1").click(function(){
-            $("#r1").css("width","500px")
-                    .css("padding","20px")
-            $("#r2,#r3,#r4").css("width","0px")
-                    .css("padding","0px")
+        // 左側收合
+        $("#l1").click(function () {
+            $("#r1").css("width", "500px")
+                .css("padding", "20px")
+            $("#r2,#r3,#r4").css("width", "0px")
+                .css("padding", "0px")
         })
 
-        $("#l2").click(function(){
-            $("#r2").css("width","500px")
-                    .css("padding","20px")
-            $("#r1,#r3,#r4").css("width","0px")
-                    .css("padding","0px")
+        $("#l2").click(function () {
+            $("#r2").css("width", "500px")
+                .css("padding", "20px")
+            $("#r1,#r3,#r4").css("width", "0px")
+                .css("padding", "0px")
         })
 
-        $("#l3").click(function(){
-            $("#r3").css("width","500px")
-                    .css("padding","20px")
-            $("#r1,#r2,#r4").css("width","0px")
-                    .css("padding","0px")
+        $("#l3").click(function () {
+            $("#r3").css("width", "500px")
+                .css("padding", "20px")
+            $("#r1,#r2,#r4").css("width", "0px")
+                .css("padding", "0px")
         })
 
-        $("#l4").click(function(){
-            $("#r4").css("width","500px")
-                    .css("padding","20px")
-            $("#r1,#r2,#r3").css("width","0px")
-                    .css("padding","0px")
+        $("#l4").click(function () {
+            $("#r4").css("width", "500px")
+                .css("padding", "20px")
+            $("#r1,#r2,#r3").css("width", "0px")
+                .css("padding", "0px")
         })
 
+
+        // QA板
+
+        $('.fas.fa-reply').click(function(){
+            QABot()
+        })
+
+        $('#issue').on('keydown',function(e){
+
+            if(e.keyCode == '13'){
+                QABot()
+
+            }
+        })
+
+        function QABot(){
+            var userIssue = $('#issue').val()
+            $('.dialogBox').append(`
+                <div class="dia_area_2">
+                    <img class="dia_2" src="./material/FAQ/dialog-08.svg" alt="">
+                    <div class="block_2">${userIssue}</div>
+                </div>
+            `)
+            $('#issue').val('')
+            $('.dialogBox').append(`
+                <div class="dia_area_1">
+                    <img class="dia_1" src="./material/FAQ/dialog-07.svg" alt="">
+                    <div class="block_1">你說的我都不會啦 <br>ಠ_ಠ　</div>
+                </div>
+            `)
+        }
     </script>
 
 
 </body>
+
 </html>
