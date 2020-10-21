@@ -11,6 +11,19 @@ body {
   font-family: source-han-sans-traditional, sans-serif;
 }
 
+#logo {
+  position: absolute;
+  top: 35px;
+  left: 60px;
+
+  width: 70px;
+  height: 70px;
+
+  img {
+    width: 100%;
+  }
+}
+
 #nav {
   margin: 0;
   width: 100%;
