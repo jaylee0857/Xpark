@@ -1,3 +1,7 @@
+* {
+  font-family: source-han-sans-traditional, sans-serif;
+}
+
 html, body {
   margin: 0;
   width: 100%;
@@ -26,15 +30,15 @@ html, body {
 }
 
 .common {
+  position: absolute;
+  top: 24%;
+  left: 10%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: absolute;
-  top: 24%;
-  margin-left: 10%;
 }
 
-.type {
+.common .type {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -47,7 +51,7 @@ html, body {
   cursor: pointer;
 }
 
-.type .box_l {
+.common .type .box_l {
   background-color: #c7b299;
   border-radius: 5px 0 0 5px;
   -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
@@ -55,7 +59,7 @@ html, body {
   width: 60px;
 }
 
-.type .box_l h2 {
+.common .type .box_l h2 {
   -webkit-writing-mode: vertical-lr;
       -ms-writing-mode: tb-lr;
           writing-mode: vertical-lr;
@@ -66,7 +70,7 @@ html, body {
           transform: translateX(-25%);
 }
 
-.type .box_r {
+.common .type .box_r {
   background-color: #fff;
   width: 0px;
   overflow: hidden;
@@ -77,7 +81,7 @@ html, body {
           box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
-.type #r4 {
+.common .type #r4 {
   width: 500px;
   padding: 20px;
 }
@@ -267,6 +271,54 @@ html, body {
   100% {
     -webkit-transform: translateX(0px) rotate(0deg);
             transform: translateX(0px) rotate(0deg);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  [class^=fish], .title, .title_wave {
+    display: none;
+  }
+  .common {
+    top: 10%;
+    left: 8%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    height: 530px;
+  }
+  .common .type .box_l {
+    position: absolute;
+    left: 0%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 120px;
+    width: 60px;
+  }
+  .common .type .box_l h2 {
+    margin-top: auto;
+    margin-bottom: auto;
+    letter-spacing: 5px;
+    font-size: 20px;
+    line-height: 60px;
+  }
+  .common .type #l1 {
+    margin-top: 0px;
+  }
+  .common .type #l2 {
+    margin-top: 130px;
+  }
+  .common .type #l3 {
+    margin-top: 260px;
+  }
+  .common .type #l4 {
+    margin-top: 390px;
+    height: 140px;
+  }
+  .common .box_r {
+    position: absolute;
+    left: 60px;
+    height: 490px;
+    padding: 0px;
   }
 }
 /*# sourceMappingURL=FAQ.css.map */

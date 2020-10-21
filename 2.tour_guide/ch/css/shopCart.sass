@@ -6,7 +6,7 @@
     // border: solid 1px black
 
 body
-    padding-top: 200px
+    padding-top: 100px
 
 #tabGroup
     display: flex
@@ -39,7 +39,7 @@ body
 .swiper-container
     width: 100%
     margin: 0 auto
-    // padding: 10px
+
     .swiper-wrapper
         .swiper-slide
             text-align: center
@@ -47,15 +47,24 @@ body
             flex-direction: column
             align-items: center
             justify-content: center
+            *
+                // border: solid 1px black
             .pic
                 width: 100%
             .item
-                display: inline-block
+                display: flex
+                padding-top: 10px
+                flex: 1
+            .price
+                display: flex
+                padding: 5px 0 0 0
+                letter-spacing: 1px
+                flex: 1
             p
-                padding: 10px 0px
+                padding: 5px 10px
             .more
-                padding: 10px
-                // background: royalblue
+                padding: 5px 10px
+                // margin-top: 10px
 
 .arrowBox
     display: flex
@@ -63,8 +72,6 @@ body
     padding-top: 30px
     font-size: 30px
     color: #666666
-    .fa-chevron-circle-left
-
     .fa-chevron-circle-right
         margin-left: 30px
 
@@ -97,4 +104,28 @@ body
     .page
         padding-top: 10px
     .swiper-slide
-        padding: :0 10px
+        padding: 0 10px
+
+    .fish_area_1
+        bottom: 12%
+        left: 10%
+        .fish1
+            width: 120px
+        p
+            font-weight: 600
+            transform: translate(40%, -40%)
+
+    .fish_area_2
+        bottom: 10%
+        left: 50%
+        .fish2
+            width: 120px
+        p
+            font-weight: 600
+
+    .arrowBox
+        padding-top: 10px
+        font-size: 30px
+        margin-right: 20px
+        .fa-chevron-circle-right
+            margin-left: 10px
