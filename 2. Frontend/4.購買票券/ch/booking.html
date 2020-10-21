@@ -51,7 +51,7 @@
                             <hr>
                             <form action="/action_page.php">
                                 <label for="birthday" style="margin-left: 15px;"></label>
-                                <input type="date" id="birthday" name="birthday">
+                                <input type="date" id="birthday" name="birthday" >
 
                             </form>
                             <ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -105,7 +105,7 @@
                                         <div class="count">
                                             <span>TWD {{price[index]}}/每人</span>
                                             <button type="button" class="cart_btn" @click='dec(index)'>-</button>
-                                            <input v-model="item.price" size="1"
+                                            <input v-model="item.price" size="1" class="inp"
                                                 style="text-align: center; margin:0 5px 5px 0;" min="1" step="1"
                                                 type="number">
                                             <button type="button" class="cart_btn" @click='inc(index)'
