@@ -476,7 +476,7 @@ body {
     margin: 0;
     width: 80%;
     height: unset;
-    background-color: #01a0e9;
+    background-color: rgba(255, 255, 255, 0.8);
     border-radius: 5px;
   }
 }
@@ -486,7 +486,7 @@ body {
   position: absolute;
   top: 10px;
   right: 10px;
-  color: white;
+  color: #666666;
   -webkit-transition: 0.4s;
   transition: 0.4s;
   font-size: 50px;
@@ -500,6 +500,7 @@ body {
 
 #nav .fa-bars:hover {
   color: #4d4d4d;
+  cursor: pointer;
 }
 
 #nav ul {
@@ -528,6 +529,7 @@ body {
     width: 100%;
     margin-top: 10px;
     padding-left: 0;
+    padding-bottom: 30px;
   }
   #nav ul.active {
     display: block;
