@@ -84,6 +84,9 @@ h1 {
   width: 100%;
   height: 15vh;
   background-color: #bfdedc;
+  position: fixed;
+  bottom: -45px;
+  right: 100px;
 }
 
 @media (max-width: 576px) {
@@ -332,6 +335,7 @@ h1 {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  margin-bottom: 30px;
 }
 
 .pay_img {
@@ -351,6 +355,10 @@ h1 {
 
 .pay_icon {
   font-weight: normal;
+}
+
+.pay_btn {
+  padding-bottom: 20px;
 }
 
 .count {
@@ -402,6 +410,11 @@ h1 {
   color: #aaaaaa;
 }
 
+#demo2 {
+  background: #26bec9;
+  color: white;
+}
+
 @media (max-width: 568px) {
   .container {
     width: 100%;
@@ -412,6 +425,9 @@ h1 {
     width: 50px;
     height: 25px;
     text-align: center;
+  }
+  #nav {
+    position: static;
   }
 }
 /*# sourceMappingURL=booking.css.map */

@@ -92,8 +92,8 @@ h1 {
   height: 15vh;
   background-color: $light_blue;
   position: fixed;
-  bottom: 0;
-  right: 0;
+  bottom: -45px;
+  right: 100px;
   @media (max-width: 576px) {
     position: absolute;
     top: 30px;
@@ -274,6 +274,7 @@ h1 {
   padding: 20px;
   display: flex;
   justify-content: flex-start;
+  margin-bottom: 30px;
 }
 .pay_img {
   padding: 5px;
@@ -290,7 +291,8 @@ h1 {
 .pay_icon {
   font-weight: normal;
 }
-.nav-item {
+.pay_btn{
+  padding-bottom: 20px;
 }
 .count {
   display: flex;
@@ -318,6 +320,10 @@ h1 {
 .age {
   font-size: 16px;
   color: #aaaaaa;
+}
+#demo2{
+  background: rgb(38, 190, 201);
+  color: white;
 }
 @media (max-width: 568px) {
   .container {
