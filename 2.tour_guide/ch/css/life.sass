@@ -5,8 +5,8 @@
 @mixin size($w,$t,$l)
     position: absolute
     width: $w
-    margin-top: $t
-    margin-left: $l
+    top: $t
+    left:: $l
 
 html,body
     margin: 0
@@ -29,21 +29,24 @@ html,body
 
 
 .child
-    position: absolute
-    width: 1920px
+    min-height: 80px
     margin-top: 2%
     margin-left: 0
     overflow: hidden
-    z-index: -100
 
 .fishes
     position: relative
     width: 100%
+    height: 100%
     pointer-events: auto
     .fish_1
         +size(170px,18%,20%)
+        // @media screen and ( max-width: 576px )
+        //     +size(170px,58%,20%)
     .fish_2
         +size(70px,16%,75%)
+        // @media screen and ( max-width: 576px )
+        //     +size(70px,38%,20%)
     .fish_3
         +size(50px,20%,80%)
     .fish_4
@@ -72,31 +75,67 @@ html,body
 
 
 #scene
+    top: -30px
     z-index: 10
     width: 100%
     height: 100vh
     overflow: hidden
     pointer-events: none
     .wave_bg
-        width: 120%
+        width: 140%
         &:nth-child(1)
-            top: 20% !important    
-            // animation-name: waves
-            // animation-iteration-count: infinite
-            // animation-direction: alternate
-            // animation-duration: 1s 
-            // animation-timing-function:  linear
-            // animation: waves 1s infinite delay alternate linear
+            top: 1% !important
+            mation: waves 1s infinite delay alternate linear
             animation: waves 3s linear -0.5s infinite alternate 
+            @media screen and ( max-width: 576px )
+                top: 0% !important
 
         &:nth-child(2)
-            top: 25% !important   
+            top: 15% !important   
             animation: waves 3s linear -1.3s infinite alternate 
-
+            @media screen and ( max-width: 576px )
+                top: 10% !important
         &:nth-child(3) 
             top: 50% !important
             animation: waves 2s linear -1.1s infinite alternate 
-            
+            @media screen and ( max-width: 1250px )
+                top: 30% !important
+                display: block !important 
+            @media screen and ( max-width: 576px )
+                top: 20% !important
+        &:nth-child(4) 
+            display: none !important
+            top: 50% !important
+            animation: waves 2s linear -1.1s infinite alternate
+            @media screen and ( max-width: 1250px )
+                display: block !important
+            @media screen and ( max-width: 576px )
+                top: 30% !important
+        &:nth-child(5) 
+            display: none !important
+            top: 60% !important
+            animation: waves 2s linear -1.1s infinite alternate
+            @media screen and ( max-width: 1250px )
+                display: block !important 
+            @media screen and ( max-width: 576px )
+                top: 47% !important
+        &:nth-child(6) 
+            display: none !important
+            top: 70% !important
+            animation: waves 2s linear -1.1s infinite alternate 
+            @media screen and ( max-width: 1250px )
+                display: block !important 
+
+            @media screen and ( max-width: 576px )
+                top: 65% !important
+        &:nth-child(7) 
+            display: none !important
+            top: 80% !important
+            animation: waves 2s linear -1.1s infinite alternate
+            @media screen and ( max-width: 1250px )
+                display: block !important 
+            @media screen and ( max-width: 576px )
+                top: 80% !important
 
 
     .sand
@@ -142,8 +181,8 @@ html,body
 
 @keyframes waves 
     0%
-        left: 0px
+        left: -100px
 
     100%
-        left: -250px
+        left: -50px
     
