@@ -1,6 +1,5 @@
 @import "_style.scss";
 
-
 * {
   box-sizing: border-box;
   
@@ -84,6 +83,8 @@ body {
           padding: 0 20px;
           font-weight: 500;
           color: $light_grey;
+          margin-top: 10px;
+          font-size: 18px;
 
           &:hover {
             cursor: pointer;
@@ -150,11 +151,14 @@ body {
             width: 90%;
             .news_title {
               text-align: center;
+              font-weight: 700;
             }
 
             .news_date {
               text-align: right;
               margin-right: 40px;
+              color: $grey;
+              font-size: 12px;
             }
 
             .icon {
@@ -227,6 +231,9 @@ body {
               border-top-left-radius: 5px;
               border-top-right-radius: 5px;
               // @include shadow();
+              &:hover {
+                cursor: pointer;
+              }
 
               &.swiper-slide-prev {
                 width: 40% !important;
@@ -258,7 +265,7 @@ body {
                   }
                 }
                 @media (max-width: 576px) {
-                  width: 100% !important;
+                  width: 95% !important;
                 }
 
                 .img {

@@ -25,6 +25,10 @@
             <img class="wave_bg" data-depth="0.1" src="./material/waves/back_wave-15.svg" alt="">
             <img class="wave_bg" data-depth="0.2" src="./material/waves/back_wave-16.svg" alt="">
             <img class="wave_bg" data-depth="0.3" src="./material/waves/back_wave-17.svg" alt="">
+            <img class="wave_bg" data-depth="0.3" src="./material/waves/back_wave-16.svg" alt="">
+            <img class="wave_bg" data-depth="0.3" src="./material/waves/back_wave-17.svg" alt="">
+            <img class="wave_bg" data-depth="0.3" src="./material/waves/back_wave-16.svg" alt="">
+            <img class="wave_bg" data-depth="0.3" src="./material/waves/back_wave-17.svg" alt="">
             <img class="sand" src="./material/waves/sand-18.svg" alt="">
 
             <div class="fishes" data-depth="0.1">
@@ -135,13 +139,16 @@
 
         $('.fishes').on('click',function(e){
             var fish = event.target.dataset.fish
-            console.log(fish);
-            //todo for
+            
+            if(e.target.nodeName == 'IMG'){
+                $('.text_area h1').text(dataFsih[fish].name)
+                $('.text_area p').text(dataFsih[fish].info)
 
-            $('.text_area h1').text(dataFsih[fish].name)
-            $('.text_area p').text(dataFsih[fish].info)
+                $(".card").addClass('active')   
 
-            $(".card").addClass('active')   
+
+            }
+
 
         })
 
