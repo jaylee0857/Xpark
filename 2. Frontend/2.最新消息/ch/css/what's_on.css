@@ -108,6 +108,8 @@ body {
   padding: 0 20px;
   font-weight: 500;
   color: #666666;
+  margin-top: 10px;
+  font-size: 18px;
 }
 
 .wrapper .container .title_group span .tab-btn:hover {
@@ -194,11 +196,14 @@ body {
 
 .wrapper .container .content .content_group .news_list .news .news_title {
   text-align: center;
+  font-weight: 700;
 }
 
 .wrapper .container .content .content_group .news_list .news .news_date {
   text-align: right;
   margin-right: 40px;
+  color: #4d4d4d;
+  font-size: 12px;
 }
 
 .wrapper .container .content .content_group .news_list .news .icon {
@@ -292,6 +297,10 @@ body {
   border-top-right-radius: 5px;
 }
 
+.wrapper .container .content #activities .swiper-container .swiper-wrapper .swiper-slide:hover {
+  cursor: pointer;
+}
+
 .wrapper .container .content #activities .swiper-container .swiper-wrapper .swiper-slide.swiper-slide-prev {
   width: 40% !important;
 }
@@ -335,7 +344,7 @@ body {
 
 @media (max-width: 576px) {
   .wrapper .container .content #activities .swiper-container .swiper-wrapper .swiper-slide.swiper-slide-active {
-    width: 100% !important;
+    width: 95% !important;
   }
 }
 
