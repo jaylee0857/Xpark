@@ -1,0 +1,115 @@
+*
+    font-family: source-han-sans-traditional, sans-serif
+    // border: solid 1px black
+    box-sizing: border-box
+
+
+html,body
+    margin: 0
+    width: 100%
+    height: 100%
+    background-color: #f2f2f2
+    cursor: url(./mouse.png),crosshair 
+       
+
+.title
+    font-size: 26px
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+    margin-top: 5%
+
+.title_wave
+    position: absolute
+    left: 50%
+    transform: translateX(-50%) scale(-1)
+    margin-top: 7%
+    width: 120px
+
+.left
+    position: absolute
+    top: 20%
+    left: 10%
+    width: 35%
+    .floor_f
+        width: 100%
+    .floors
+        top: 20px
+        display: flex
+        justify-content: center
+        width: 100%
+        .img
+            padding: 10px 15px
+            cursor: pointer
+
+.guided
+    position: absolute
+    width: 30%
+    left: 55%
+    top: 20%
+    cursor: pointer
+    .swiper-slide
+        text-align: center
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        h3
+            margin: 10px
+        img
+            width: 100%
+        h4
+            margin-bottom: -10px
+        p
+            margin: 0
+            padding: 20px
+            letter-spacing: 1px
+
+.child
+    position: absolute
+    bottom: -70px
+    width: 300px
+    left: 30%
+    .head
+        width: 100%
+    .eye_l
+        position: absolute
+        width: 30px
+        left: 34%
+        top: 52%
+        transition: 0.3s
+    .eye_r
+        position: absolute
+        width: 30px
+        left: 57%
+        top: 53%
+        transition: 0.3s
+
+    // .hand
+    //     position: absolute
+    //     width: 250px
+    //     overflow: hidden
+
+.mouse
+    width: 40px
+    position: absolute
+    pointer-events: none
+    z-index: 200
+
+
+@media screen and (max-width: 576px)
+    .left
+        position: absolute
+        top: 2%
+        width: 90%
+        left: 50%
+        transform: translateX(-50%)
+        .f_1,.f_2,.f_3
+ 
+    .guided
+        width: 80%
+        position: absolute
+        top: 52%
+        left: 50%
+        transform: translateX(-50%)
+        width: 90%
