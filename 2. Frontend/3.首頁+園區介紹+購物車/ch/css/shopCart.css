@@ -5,18 +5,39 @@
   font-family: source-han-sans-traditional, sans-serif;
 }
 
-body {
-  padding-top: 100px;
+#nav {
+  background-color: #bfdedc !important;
+  position: absolute;
+  bottom: 0;
+}
+
+.title {
+  font-size: 30px;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  padding-top: 80px;
+}
+
+.title_wave {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%) scale(-1);
+          transform: translateX(-50%) scale(-1);
+  top: 120px;
+  width: 120px;
 }
 
 #tabGroup {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-width: 1500px;
-  margin: 0 auto;
   cursor: pointer;
   padding: 10px;
+  position: absolute;
+  top: 20%;
+  left: 10%;
 }
 
 #tabGroup .gift, #tabGroup .essential {
@@ -50,6 +71,7 @@ body {
 .swiper-container {
   width: 100%;
   margin: 0 auto;
+  top: 190px;
 }
 
 .swiper-container .swiper-wrapper .swiper-slide {
@@ -126,6 +148,7 @@ body {
   position: absolute;
   bottom: 10%;
   left: 30%;
+  z-index: 10;
 }
 
 .fish_area_1 .fish1 {
@@ -142,6 +165,7 @@ body {
   position: absolute;
   bottom: 10%;
   left: 50%;
+  z-index: 10;
 }
 
 .fish_area_2 .fish2 {

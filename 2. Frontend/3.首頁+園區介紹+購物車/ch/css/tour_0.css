@@ -17,12 +17,12 @@ html, body {
 }
 
 .title {
-  font-size: 26px;
+  font-size: 30px;
   position: absolute;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  top: 8%;
+  padding-top: 80px;
 }
 
 .title_wave {
@@ -30,7 +30,7 @@ html, body {
   left: 50%;
   -webkit-transform: translateX(-50%) scale(-1);
           transform: translateX(-50%) scale(-1);
-  top: 14%;
+  top: 120px;
   width: 120px;
 }
 

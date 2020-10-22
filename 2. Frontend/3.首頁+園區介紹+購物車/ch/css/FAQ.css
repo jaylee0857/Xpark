@@ -6,18 +6,24 @@ html, body {
   margin: 0;
   width: 100%;
   height: 100%;
-  background-color: #e4f0f7;
+  background-color: #bfdedc;
   position: relative;
   overflow: hidden;
 }
 
+#nav {
+  background-color: #bfdedc !important;
+  position: absolute;
+  bottom: 0;
+}
+
 .title {
-  font-size: 26px;
+  font-size: 30px;
   position: absolute;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  margin-top: 5%;
+  padding-top: 80px;
 }
 
 .title_wave {
@@ -25,7 +31,7 @@ html, body {
   left: 50%;
   -webkit-transform: translateX(-50%) scale(-1);
           transform: translateX(-50%) scale(-1);
-  margin-top: 7%;
+  top: 120px;
   width: 120px;
 }
 
