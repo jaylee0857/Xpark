@@ -11,12 +11,6 @@ html, body {
   overflow: hidden;
 }
 
-#nav {
-  background-color: #bfdedc !important;
-  position: absolute;
-  bottom: 0;
-}
-
 .title {
   font-size: 30px;
   position: absolute;
@@ -24,6 +18,7 @@ html, body {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   padding-top: 80px;
+  font-weight: 550;
 }
 
 .title_wave {
@@ -78,16 +73,18 @@ html, body {
 
 .common .type .box_r {
   background-color: #fff;
-  width: 0px;
   overflow: hidden;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
   border-radius: 0 5px 5px 0;
   -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
           box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  width: 0;
+  padding: 0;
+  overflow: scroll;
 }
 
-.common .type #r4 {
+.common .type .active-block {
   width: 500px;
   padding: 20px;
 }
@@ -280,16 +277,29 @@ html, body {
   }
 }
 
-@media screen and (max-width: 700px) {
-  [class^=fish], .title, .title_wave {
+@media screen and (max-width: 576px) {
+  [class^=fish] {
     display: none;
+  }
+  body {
+    overflow: auto;
+  }
+  .title {
+    position: absolute;
+    top: -8%;
   }
   .dialog {
-    display: none;
+    top: 650px;
+    right: 0%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    margin-bottom: 30px;
   }
   .common {
+    position: absolute;
     top: 10%;
-    left: 8%;
+    left: 14%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
     height: 530px;
@@ -321,16 +331,16 @@ html, body {
     margin-top: 390px;
     height: 140px;
   }
-  .common .box_r {
+  .common .type .box_r {
     position: absolute;
     left: 30px;
-    height: 490px;
-    padding: 0px;
-    width: 400px;
+    width: 0;
+    height: 500px;
+    padding: 0;
   }
-  .common #r4 {
+  .common .type .active-block {
     width: 400px;
-    padding: 20px;
+    padding: 15px;
   }
 }
 /*# sourceMappingURL=FAQ.css.map */

@@ -1,16 +1,8 @@
 *
-    box-sizing: border-box
-    // padding: 0
-    margin: 0
     font-family: source-han-sans-traditional, sans-serif
+    box-sizing: border-box
     // border: solid 1px black
 
-body
-
-#nav
-    background-color: #bfdedc !important
-    position: absolute
-    bottom: 0
 
 .title
     font-size: 30px
@@ -19,21 +11,15 @@ body
     transform: translateX(-50%)
     padding-top: 80px
 
-.title_wave
-    position: absolute
-    left: 50%
-    transform: translateX(-50%) scale(-1)
-    top: 120px
-    width: 120px
-
 
 #tabGroup
     display: flex
     cursor: pointer
     padding: 10px
     position: absolute
-    top: 20%
-    left: 10%
+    top: 23%
+    left: 15%
+    font-weight: 600
     .gift, .essential
         position: relative
         font-size: 20px
@@ -59,7 +45,7 @@ body
 .swiper-container
     width: 100%
     margin: 0 auto
-    top: 190px
+    top: 250px
 
     .swiper-wrapper
         .swiper-slide
@@ -68,6 +54,7 @@ body
             flex-direction: column
             align-items: center
             justify-content: center
+            
             *
                 // border: solid 1px black
             .pic
@@ -75,24 +62,25 @@ body
             .item
                 display: flex
                 padding-top: 10px
-                flex: 1
+                margin: 0
             .price
                 display: flex
                 padding: 5px 0 0 0
                 letter-spacing: 1px
-                flex: 1
+                margin: 0
             p
                 padding: 5px 10px
+                margin: 0
             .more
                 padding: 5px 10px
-                // margin-top: 10px
+                margin-top: 10px
 
 .arrowBox
     display: flex
     justify-content: flex-end
-    padding-top: 30px
     font-size: 30px
     color: #666666
+    margin-top: 20%
     .fa-chevron-circle-right
         margin-left: 30px
 
@@ -108,7 +96,7 @@ body
         width: 150px
     p
         font-weight: 600
-        transform: translate(40%, -80%)
+        transform: translate(80%, 0%)
 
 .fish_area_2
     position: absolute
@@ -119,6 +107,8 @@ body
         width: 150px
     p
         font-weight: 600
+        opacity: 0
+        font-size: 26px
 
 
 @media screen and (max-width: 576px)
@@ -130,21 +120,18 @@ body
         padding: 0 10px
 
     .fish_area_1
-        bottom: 12%
-        left: 10%
+        bottom: 5%
+        left: 15%
         .fish1
             width: 120px
         p
-            font-weight: 600
             transform: translate(40%, -40%)
 
     .fish_area_2
-        bottom: 10%
-        left: 50%
+        bottom: 4%
+        left: 60%
         .fish2
             width: 120px
-        p
-            font-weight: 600
 
     .arrowBox
         padding-top: 10px

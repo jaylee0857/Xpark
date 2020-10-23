@@ -10,12 +10,6 @@ html, body {
   overflow: hidden;
 }
 
-#nav {
-  background-color: #A6D8D0 !important;
-  position: absolute;
-  bottom: 0;
-}
-
 .title {
   font-size: 30px;
   position: absolute;
