@@ -20,6 +20,8 @@ Route::get('/shopCart', 'FrontController@shopCart'); //紀念品店
 
 
 
+Route::get('/whats_on', 'FrontController@whats_on'); //最新消息中文頁
+Route::get('/whats_on_en', 'FrontController@whats_on_en'); //最新消息英文頁
 
 Route::get('/test', 'FrontController@booking');
 
@@ -35,26 +37,18 @@ Route::get('/admin', 'HomeController@index')->name('home');
 Route::prefix('admin')->middleware(['auth'])->group(function () {
 
     // news_ch後台
-    Route::get('/news_ch', 'news_chController@index');
-    Route::get('/news_ch/create', 'news_chController@create');
-    Route::post('/news_ch/store', 'news_chController@store');
-    Route::get('/news_ch/edit/{news_ch_id}', 'news_chController@edit');
-    Route::post('/news_ch/update/{news_ch_id}', 'news_chController@update');
-    Route::get('/news_ch/destroy/{news_ch_id}', 'news_chController@destroy');
-
-    // news_ch後台
-    Route::get('/news_en', 'news_enController@index');
-    Route::get('/news_en/create', 'news_enController@create');
-    Route::post('/news_en/store', 'news_enController@store');
-    Route::get('/news_en/edit/{news_ch_id}', 'news_enController@edit');
-    Route::post('/news_en/update/{news_ch_id}', 'news_enController@update');
-    Route::get('/news_en/destroy/{news_ch_id}', 'news_enController@destroy');
+    Route::get('/news_ch', 'NewsChController@index');
+    Route::get('/news_ch/create', 'NewsChController@create');
+    Route::post('/news_ch/store', 'NewsChController@store');
+    Route::get('/news_ch/edit/{news_ch_id}', 'NewsChController@edit');
+    Route::post('/news_ch/update/{news_ch_id}', 'NewsChController@update');
+    Route::get('/news_ch/destroy/{news_ch_id}', 'NewsChController@destroy');
 
     // events_ch後台
-    Route::get('/events_ch', 'events_chController@index');
-    Route::get('/events_ch/create', 'events_chController@create');
-    Route::post('/events_ch/store', 'events_chController@store');
-    Route::get('/events_ch/edit/{events_ch_id}', 'events_chController@edit');
-    Route::post('/events_ch/update/{events_ch_id}', 'events_chController@update');
-    Route::get('/events_ch/destroy/{events_ch_id}', 'events_chController@destroy');
+    Route::get('/events_ch', 'EventsChController@index');
+    Route::get('/events_ch/create', 'EventsChController@create');
+    Route::post('/events_ch/store', 'EventsChController@store');
+    Route::get('/events_ch/edit/{events_ch_id}', 'EventsChController@edit');
+    Route::post('/events_ch/update/{events_ch_id}', 'EventsChController@update');
+    Route::get('/events_ch/destroy/{events_ch_id}', 'EventsChController@destroy');
 });

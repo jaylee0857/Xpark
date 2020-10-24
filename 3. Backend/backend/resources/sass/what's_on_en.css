@@ -684,8 +684,6 @@ body {
 
 @media (max-width: 576px) {
   #nav ul li a .bubble {
-    width: 80px;
-    height: 80px;
     top: -60px;
     left: 192px;
   }
