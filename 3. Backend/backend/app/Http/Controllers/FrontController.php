@@ -41,6 +41,8 @@ class FrontController extends Controller
     public function shopCart()
     {
         return view('front/shopCart');
+    }
+    
     public function whats_on()
     {
         $news_ch_list = Ch_News::orderBy('sort', 'asc')->take(4)->get();

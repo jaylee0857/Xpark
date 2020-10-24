@@ -33,7 +33,7 @@
             </div>
             <a href=""><img class="btn_3" src="/img/material/index/btn-06.svg" alt=""></a>
             <a href="/tour_0"><img class="btn_4" src="/img/material/index/btn-07.svg" alt=""></a>
-            <a href=""><img class="btn_5" src="/img/material/index/btn-08.svg" alt=""></a>                   {{-- 缺-購買票券 --}}
+            <a href="/whats_on"><img class="btn_5" src="/img/material/index/btn-08.svg" alt=""></a>
             <a href="/shopCart"><img class="btn_6" src="/img/material/index/btn-09.svg" alt=""></a>
             <a href="/life"><img class="btn_7" src="/img/material/index/btn-10.svg" alt=""></a>
             <a href="/FAQ"><img class="btn_8" src="/img/material/index/btn-11.svg" alt=""></a>
