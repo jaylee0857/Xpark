@@ -33,11 +33,11 @@
                 <img class="btn_1" src="/img/material/index/btn-04.svg" alt="">
                 <img class="btn_2" src="/img/material/index/btn-05.svg" alt="">
             </div>
-            <img class="btn_3" src="/img/material/index/btn-06.svg" alt="">
+            <a href="/whats_on"><img class="btn_3" src="/img/material/index/btn-06.svg" alt=""></a>
             <img class="btn_4" src="/img/material/index/btn-07.svg" alt="">
             <img class="btn_5" src="/img/material/index/btn-08.svg" alt="">
             <img class="btn_6" src="/img/material/index/btn-09.svg" alt="">
-            <img class="btn_7" src="/img/material/index/btn-10.svg" alt="">
+            {{-- <img class="btn_7" src="/img/material/index/btn-10.svg" alt=""> --}}
             <img class="btn_8" src="/img/material/index/btn-11.svg" alt="">
             <div class="group">
                 <img class="btn_9" src="/img/material/index/btn-12.svg" alt="">

@@ -19,7 +19,7 @@
         <i class="bars fas fa-bars"></i>
         <ul class="phoneVersion">
             <li>
-                <a href="#">
+                <a href="/whats_on">
                     <img class="bubble" src="svg/bubble.gif" alt="">最新消息
                 </a>
             </li>
