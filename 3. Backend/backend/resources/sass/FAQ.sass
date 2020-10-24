@@ -25,13 +25,6 @@ html,body
     padding-top: 80px
     font-weight: 550
 
-.title_wave
-    position: absolute
-    left: 50%
-    transform: translateX(-50%) scale(-1)
-    top: 120px
-    width: 120px
-
 .common
     // border: solid 1px
     position: absolute
@@ -89,8 +82,8 @@ html,body
         height: 380px
         padding: 30px 30px
         overflow: scroll
-        &::-webkit-scrollbar 
-            display: none 
+        &::-webkit-scrollbar
+            display: none
         .dia_area_1
             position: relative
             .dia_1
@@ -123,7 +116,7 @@ html,body
                 right: 95px
 
         .issueBox
-        
+
     input
         position: absolute
         bottom: 0px
@@ -140,7 +133,7 @@ html,body
         position: absolute
         &:hover
             color: grey
-        
+
 .fish_1
     +size(170px,5%,20%)
 
@@ -157,7 +150,7 @@ html,body
 
 .fish_5
     +size(140px,10%,62%)
-    
+
 .fish_6
     +size(30px,17%,80%)
     animation: move 4s infinite
@@ -170,7 +163,7 @@ html,body
         transform: scaleY(1.3)
     100%
         transform: scaleY(1)
-        
+
 @keyframes move
     0%
         transform: translateX(400px) rotate(360deg)
@@ -181,8 +174,8 @@ html,body
 
     [class^=fish]
         display: none
-    
-    body 
+
+    body
         overflow: auto
 
 
@@ -214,11 +207,11 @@ html,body
                 display: flex
                 height: 120px
                 width: 30px
-                
+
                 h2
                     letter-spacing: 5px
                     font-size: 18px
-                    margin-left: 8px                   
+                    margin-left: 8px
 
             #l1
                 margin-top: 0px
@@ -240,6 +233,6 @@ html,body
             .active-block
                 width: 400px
                 padding: 15px
-            
+
 
 

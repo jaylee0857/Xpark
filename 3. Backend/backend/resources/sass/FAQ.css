@@ -21,15 +21,6 @@ html, body {
   font-weight: 550;
 }
 
-.title_wave {
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%) scale(-1);
-          transform: translateX(-50%) scale(-1);
-  top: 120px;
-  width: 120px;
-}
-
 .common {
   position: absolute;
   top: 24%;
