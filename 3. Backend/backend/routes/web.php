@@ -12,6 +12,14 @@
 */
 
 Route::get('/', 'FrontController@index'); //首頁
+Route::get('/tour_0', 'FrontController@tour_0'); //館內導覽
+Route::get('/tour_F', 'FrontController@tour_F'); //樓層簡介
+Route::get('/life', 'FrontController@life'); //動物介紹
+Route::get('/FAQ', 'FrontController@FAQ'); //常見問答
+Route::get('/shopCart', 'FrontController@shopCart'); //紀念品店
+
+
+
 
 Route::get('/test', 'FrontController@booking');
 

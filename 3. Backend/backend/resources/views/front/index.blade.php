@@ -6,8 +6,6 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- all css -->
-    <link rel="stylesheet" href="./css/all.css">
     <!-- page css -->
     <link rel="stylesheet" href="/css/index.css">
 </head>
@@ -30,18 +28,18 @@
 
         <div class="nav_bar">
             <div class="group">
-                <img class="btn_1" src="/img/material/index/btn-04.svg" alt="">
-                <img class="btn_2" src="/img/material/index/btn-05.svg" alt="">
+                <a href=""><img class="btn_1" src="/img/material/index/btn-04.svg" alt=""></a>    {{-- 待補-中文 --}}
+                <a href=""><img class="btn_2" src="/img/material/index/btn-05.svg" alt=""></a>    {{-- 待補-英文 --}}
             </div>
-            <img class="btn_3" src="/img/material/index/btn-06.svg" alt="">
-            <img class="btn_4" src="/img/material/index/btn-07.svg" alt="">
-            <img class="btn_5" src="/img/material/index/btn-08.svg" alt="">
-            <img class="btn_6" src="/img/material/index/btn-09.svg" alt="">
-            <img class="btn_7" src="/img/material/index/btn-10.svg" alt="">
-            <img class="btn_8" src="/img/material/index/btn-11.svg" alt="">
+            <a href=""><img class="btn_3" src="/img/material/index/btn-06.svg" alt=""></a>
+            <a href="/tour_0"><img class="btn_4" src="/img/material/index/btn-07.svg" alt=""></a>
+            <a href=""><img class="btn_5" src="/img/material/index/btn-08.svg" alt=""></a>                   {{-- 缺-購買票券 --}}
+            <a href="/shopCart"><img class="btn_6" src="/img/material/index/btn-09.svg" alt=""></a>
+            <a href="/life"><img class="btn_7" src="/img/material/index/btn-10.svg" alt=""></a>
+            <a href="/FAQ"><img class="btn_8" src="/img/material/index/btn-11.svg" alt=""></a>
             <div class="group">
-                <img class="btn_9" src="/img/material/index/btn-12.svg" alt="">
-                <img class="btn_10" src="/img/material/index/btn-13.svg" alt="">
+                <a href="https://www.facebook.com/Xparkaquarium/"><img class="btn_9" src="/img/material/index/btn-12.svg" alt=""></a>
+                <a href="https://www.instagram.com/xpark_aquarium/"><img class="btn_10" src="/img/material/index/btn-13.svg" alt=""></a>
             </div>
         </div>
 

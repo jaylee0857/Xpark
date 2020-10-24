@@ -8,11 +8,11 @@
 
 body {
   font-family: source-han-sans-traditional, sans-serif;
-  cursor: url(./mouse.png),crosshair;
+  cursor: url(/public/css/mouse.png),crosshair;
 }
 
 html {
-  cursor: url(./mouse.png),crosshair;
+  cursor: url(/public/css/mouse.png),crosshair;
 }
 
 #logo {
@@ -33,6 +33,7 @@ html {
   bottom: 50px;
   margin: 0;
   width: 100%;
+  z-index: 100;
   @media (max-width: 576px) {
     position: absolute;
     top: 30px;

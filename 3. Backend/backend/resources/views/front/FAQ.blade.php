@@ -1,27 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts/nav')
 
-<head>
-    <meta charset="UTF-8">
-    <link rel="shortcut icon" href="./images/xpark_logo.png">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+@section('css')
     <!-- page css -->
-    <link rel="stylesheet" href="/public/css/FAQ.css">
+    <link rel="stylesheet" href="/css/FAQ.css">
     <!-- swiper -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <!-- bootstrap -->
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/">
-    <!-- font-awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+@endsection
 
 
-</head>
-
-<body>
+@section('content')
     <section id="FAQ">
         <h1 class="title">FAQ</h1>
-        <!-- <img class="title_wave" src="/public/img/material/waves/wave-34.svg" alt=""> -->
+        <!-- <img class="title_wave" src="/img/material/waves/wave-34.svg" alt=""> -->
 
         <div class="common">
 
@@ -124,7 +116,7 @@
         <div class="dialog">
             <div class="dialogBox">
                 <div class="dia_area_1">
-                    <img class="dia_1" src="/public/img/material/FAQ/dialog-07.svg" alt="">
+                    <img class="dia_1" src="/img/material/FAQ/dialog-07.svg" alt="">
                     <div class="block_1">有其他問題？提問來幫您解決 <br>ヽ༼⊙_⊙༽ﾉ</div>
                 </div>
 
@@ -136,21 +128,20 @@
         </div>
 
 
-        <img class="fish_1" src="/public/img/material/FAQ/fish-01.svg" alt="">
-        <img class="fish_2" src="/public/img/material/FAQ/fish-02.svg" alt="">
-        <img class="fish_3" src="/public/img/material/FAQ/fish-03.svg" alt="">
-        <img class="fish_4" src="/public/img/material/FAQ/fish-04.svg" alt="">
-        <img class="fish_5" src="/public/img/material/FAQ/fish-05.svg" alt="">
-        <img class="fish_6" src="/public/img/material/FAQ/fish-06.svg" alt="">
+        <img class="fish_1" src="/img/material/FAQ/fish-01.svg" alt="">
+        <img class="fish_2" src="/img/material/FAQ/fish-02.svg" alt="">
+        <img class="fish_3" src="/img/material/FAQ/fish-03.svg" alt="">
+        <img class="fish_4" src="/img/material/FAQ/fish-04.svg" alt="">
+        <img class="fish_5" src="/img/material/FAQ/fish-05.svg" alt="">
+        <img class="fish_6" src="/img/material/FAQ/fish-06.svg" alt="">
 
 
     </section>
+@endsection
 
-
-
+@section('js')
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <!-- Initialize Swiper -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
     <script>
         console.log($(window).width());
@@ -198,23 +189,18 @@
             var userIssue = $('#issue').val()
             $('.dialogBox').append(`
                 <div class="dia_area_2">
-                    <img class="dia_2" src="/public/img/material/FAQ/dialog-08.svg" alt="">
+                    <img class="dia_2" src="/img/material/FAQ/dialog-08.svg" alt="">
                     <div class="block_2">${userIssue}</div>
                 </div>
             `)
             $('#issue').val('')
             $('.dialogBox').append(`
                 <div class="dia_area_1">
-                    <img class="dia_1" src="/public/img/material/FAQ/dialog-07.svg" alt="">
+                    <img class="dia_1" src="/img/material/FAQ/dialog-07.svg" alt="">
                     <div class="block_1">你說的我都不會啦 <br>ಠ_ಠ　</div>
                 </div>
             `)
         }
     </script>
 
-
-
-
-</body>
-
-</html>
+@endsection

@@ -1,22 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts/nav')
 
-<head>
-    <meta charset="UTF-8">
-    <link rel="shortcut icon" href="./images/xpark_logo.png">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+@section('css')
     <title>Shop</title>
     <!-- swiper -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
     <!-- page css -->
-    <link rel="stylesheet" href="/public/css/shopCart.css">
-    <!-- tamplate -->
+    <link rel="stylesheet" href="/css/shopCart.css">
+@endsection
 
-    <!-- fontawesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-</head>
 
-<body>
+@section('content')
     <h1 class="title">紀念品店</h1>
 
     <section id="tabGroup">
@@ -29,49 +22,49 @@
         <div class="swiper-container">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <img class="pic" src="/public/img/material/cart/shop_1.jpg" alt="">
+                    <img class="pic" src="/img/material/cart/shop_1.jpg" alt="">
                     <h2 class="item">巧克力球</h2>
                     <h4 class="price">NTD500</h4>
                     <p class="info">近年日本更是推出頂級巧克力球，殊不知，這風靡大人小孩的點心最早其實起源於英國！</p>
                     <button class="more">了解更多</button>
                 </div>
                 <div class="swiper-slide">
-                    <img class="pic" src="/public/img/material/cart/shop_2.jpg" alt="">
+                    <img class="pic" src="/img/material/cart/shop_2.jpg" alt="">
                     <h2 class="item">巧克力棒</h2>
                     <h4 class="price">NTD500</h4>
                     <p class="info">近年日本更是推出頂級巧克力球，殊不知，這風靡大人小孩的點心最早其實起源於英國！</p>
                     <button class="more">了解更多</button>
                 </div>
                 <div class="swiper-slide">
-                    <img class="pic" src="/public/img/material/cart/shop_3.jpg" alt="">
+                    <img class="pic" src="/img/material/cart/shop_3.jpg" alt="">
                     <h2 class="item">法式鳳梨酥</h2>
                     <h4 class="price">NTD500</h4>
                     <p class="info">近年日本更是推出頂級巧克力球，殊不知，這風靡大人小孩的點心最早其實起源於英國！</p>
                     <button class="more">了解更多</button>
                 </div>
                 <div class="swiper-slide">
-                    <img class="pic" src="/public/img/material/cart/shop_4.jpg" alt="">
+                    <img class="pic" src="/img/material/cart/shop_4.jpg" alt="">
                     <h2 class="item">sousou 聯名托特包</h2>
                     <h4 class="price">NTD500</h4>
                     <p class="info">近年日本更是推出頂級巧克力球，殊不知，這風靡大人小孩的點心最早其實起源於英國！</p>
                     <button class="more">了解更多</button>
                 </div>
                 <div class="swiper-slide">
-                    <img class="pic" src="/public/img/material/cart/shop_5.jpg" alt="">
+                    <img class="pic" src="/img/material/cart/shop_5.jpg" alt="">
                     <h2 class="item">象印 聯名保溫瓶</h2>
                     <h4 class="price">NTD500</h4>
                     <p class="info">近年日本更是推出頂級巧克力球，殊不知，這風靡大人小孩的點心最早其實起源於英國！</p>
                     <button class="more">了解更多</button>
                 </div>
                 <div class="swiper-slide">
-                    <img class="pic" src="/public/img/material/cart/shop_6.jpg" alt="">
+                    <img class="pic" src="/img/material/cart/shop_6.jpg" alt="">
                     <h2 class="item">WEAVISM聯名毛巾</h2>
                     <h4 class="price">NTD500</h4>
                     <p class="info">近年日本更是推出頂級巧克力球，殊不知，這風靡大人小孩的點心最早其實起源於英國！</p>
                     <button class="more">了解更多</button>
                 </div>
                 <div class="swiper-slide">
-                    <img class="pic" src="/public/img/material/cart/shop_7.jpg" alt="">
+                    <img class="pic" src="/img/material/cart/shop_7.jpg" alt="">
                     <h2 class="item">變色馬克杯</h2>
                     <h4 class="price">NTD500</h4>
                     <p class="info">近年日本更是推出頂級巧克力球，殊不知，這風靡大人小孩的點心最早其實起源於英國！</p>
@@ -90,49 +83,49 @@
         <div class="swiper-container">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <img class="pic" src="/public/img/material/cart/shop_4.jpg" alt="">
+                    <img class="pic" src="/img/material/cart/shop_4.jpg" alt="">
                     <h2 class="item">sousou 聯名托特包</h2>
                     <h4 class="price">NTD500</h4>
                     <p class="info">近年日本更是推出頂級巧克力球，殊不知，這風靡大人小孩的點心最早其實起源於英國！</p>
                     <button class="more">了解更多</button>
                 </div>
                 <div class="swiper-slide">
-                    <img class="pic" src="/public/img/material/cart/shop_5.jpg" alt="">
+                    <img class="pic" src="/img/material/cart/shop_5.jpg" alt="">
                     <h2 class="item">象印 聯名保溫瓶</h2>
                     <h4 class="price">NTD500</h4>
                     <p class="info">近年日本更是推出頂級巧克力球，殊不知，這風靡大人小孩的點心最早其實起源於英國！</p>
                     <button class="more">了解更多</button>
                 </div>
                 <div class="swiper-slide">
-                    <img class="pic" src="/public/img/material/cart/shop_6.jpg" alt="">
+                    <img class="pic" src="/img/material/cart/shop_6.jpg" alt="">
                     <h2 class="item">WEAVISM聯名毛巾</h2>
                     <h4 class="price">NTD500</h4>
                     <p class="info">近年日本更是推出頂級巧克力球，殊不知，這風靡大人小孩的點心最早其實起源於英國！</p>
                     <button class="more">了解更多</button>
                 </div>
                 <div class="swiper-slide">
-                    <img class="pic" src="/public/img/material/cart/shop_7.jpg" alt="">
+                    <img class="pic" src="/img/material/cart/shop_7.jpg" alt="">
                     <h2 class="item">變色馬克杯</h2>
                     <h4 class="price">NTD500</h4>
                     <p class="info">近年日本更是推出頂級巧克力球，殊不知，這風靡大人小孩的點心最早其實起源於英國！</p>
                     <button class="more">了解更多</button>
                 </div>
                 <div class="swiper-slide">
-                    <img class="pic" src="/public/img/material/cart/shop_1.jpg" alt="">
+                    <img class="pic" src="/img/material/cart/shop_1.jpg" alt="">
                     <h2 class="item">巧克力球</h2>
                     <h4 class="price">NTD500</h4>
                     <p class="info">近年日本更是推出頂級巧克力球，殊不知，這風靡大人小孩的點心最早其實起源於英國！</p>
                     <button class="more">了解更多</button>
                 </div>
                 <div class="swiper-slide">
-                    <img class="pic" src="/public/img/material/cart/shop_2.jpg" alt="">
+                    <img class="pic" src="/img/material/cart/shop_2.jpg" alt="">
                     <h2 class="item">巧克力棒</h2>
                     <h4 class="price">NTD500</h4>
                     <p class="info">近年日本更是推出頂級巧克力球，殊不知，這風靡大人小孩的點心最早其實起源於英國！</p>
                     <button class="more">了解更多</button>
                 </div>
                 <div class="swiper-slide">
-                    <img class="pic" src="/public/img/material/cart/shop_3.jpg" alt="">
+                    <img class="pic" src="/img/material/cart/shop_3.jpg" alt="">
                     <h2 class="item">法式鳳梨酥</h2>
                     <h4 class="price">NTD500</h4>
                     <p class="info">近年日本更是推出頂級巧克力球，殊不知，這風靡大人小孩的點心最早其實起源於英國！</p>
@@ -151,20 +144,20 @@
 
     <div class="fish_area_1">
         <p class="fish1_text"></p>
-        <img class="fish1" src="/public/img/material/lifes/life-11.svg" alt="">
+        <img class="fish1" src="/img/material/lifes/life-11.svg" alt="">
 
     </div>
 
     <div class="fish_area_2">
         <p class="fish2_text">!</p>
-        <img class="fish2" src="/public/img/material/lifes/life-08.svg" alt="">
+        <img class="fish2" src="/img/material/lifes/life-08.svg" alt="">
     </div>
 
+@endsection
 
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-    <!-- Initialize Swiper -->
+@section('js')
+<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+<!-- Initialize Swiper -->
     <script>
         var swiper1 = new Swiper('#page1 .swiper-container', {
             slidesPerView: 4,
@@ -268,9 +261,4 @@
             }
         };
     </script>
-
-
-
-</body>
-
-</html>
+@endsection
