@@ -8,11 +8,11 @@
 
 body {
   font-family: source-han-sans-traditional, sans-serif;
-  cursor: url(./mouse.png),crosshair;
+  cursor: url(./mouse.png),crosshair !important;
 }
 
 html {
-  cursor: url(./mouse.png),crosshair;
+  cursor: url(./mouse.png),crosshair !important;;
 }
 
 #logo {

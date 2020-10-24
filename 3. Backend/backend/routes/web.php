@@ -12,6 +12,8 @@
 */
 
 Route::get('/', 'FrontController@index'); //首頁
+Route::get('/whats_on', 'FrontController@whats_on'); //新聞頁
+Route::get('/whats_on_en', 'FrontController@whats_on_en'); //新聞頁
 
 Route::get('/test', 'FrontController@booking');
 
@@ -27,12 +29,12 @@ Route::get('/admin', 'HomeController@index')->name('home');
 Route::prefix('admin')->middleware(['auth'])->group(function () {
 
     // news_ch後台
-    Route::get('/news_ch', 'news_chController@index');
-    Route::get('/news_ch/create', 'news_chController@create');
-    Route::post('/news_ch/store', 'news_chController@store');
-    Route::get('/news_ch/edit/{news_ch_id}', 'news_chController@edit');
-    Route::post('/news_ch/update/{news_ch_id}', 'news_chController@update');
-    Route::get('/news_ch/destroy/{news_ch_id}', 'news_chController@destroy');
+    Route::get('/news_ch', 'NewsChController@index');
+    Route::get('/news_ch/create', 'NewsChController@create');
+    Route::post('/news_ch/store', 'NewsChController@store');
+    Route::get('/news_ch/edit/{news_ch_id}', 'NewsChController@edit');
+    Route::post('/news_ch/update/{news_ch_id}', 'NewsChController@update');
+    Route::get('/news_ch/destroy/{news_ch_id}', 'NewsChController@destroy');
 
     // news_ch後台
     Route::get('/news_en', 'news_enController@index');
