@@ -21,76 +21,21 @@
     </div>
     <div class="content">
          <div id="news" class="content_group">
-              <div class="news_list">
-                   <div class="news">
-                        <div class="news_title">購票請先至KKday網站預購</div>
-                        <div class="news_date">2020.10.18</div>
-                   </div>
-                   <div class="icon fas fa-minus-circle"></div>
-              </div>
-              <div class="news_info">
-                   <div class="img"><img src="/img/news_kkday.jpg" alt=""></div>
-                   <div class="text">
-                        <p>Xpark為台灣首座新都會型水生公園。將生活在地球上各種地域的生物們的環境，透過空間演出與科技的融合，加以忠實的重現。在連氣溫、濕度、味道及聲音都經過縝密計算的空間裡，從天花板到地坪、延伸至水槽的影像演出呈現出360°具魄力的沉浸式空間。來訪的遊客並非單純透過壓克力玻璃觀賞生物，而是彷彿真的身歷其境，可以使用五感體驗各真實場景。主角，是生活在那裡的生物們，隨環境變遷而演變進化的生物們的不思議，從全方位各種角度將其魅力性襯托出來的環境演出也是一大特徵。
-                        </p>
-                   </div>
-              </div>
-
-              <div class="news_list">
-                   <div class="news">
-                        <div class="news_title">對於本館生物照護疑慮之聲明</div>
-                        <div class="news_date">2020.10.15</div>
-                   </div>
-                   <div class="icon fas fa-minus-circle"></div>
-              </div>
-              <div class="news_info">
-                   <div class="img"><img src="/img/news_animals.jpg" alt=""></div>
-                   <div class="text">
-                        <p>Xpark未來會強化在社群媒體及現場活動上的教育傳播功能，避免有心人士於其他管道營造本館漠視動物權利之錯誤印象。針對各類不實指控，如發生傷及我方商譽行為，本館將採取法律途徑以維護自身權益。
-
-                             最後，再次感謝所有喜歡動物的每一位民眾對生物們的關心，各位的意見Xpark都不會漠視，Xpark的建立目標，承襲株式會社橫浜八景島的經營理念─透過生物散播笑容與感動到全世界，同時也期望可以透過水族館建立起親近海洋的管道，逐步發現海洋生物的困境，並在未來一點一滴的累積化成正能量，反饋到自然環境中盡一份心力。
-                        </p>
-                   </div>
-              </div>
-
-              <div class="news_list">
-                   <div class="news">
-                        <div class="news_title">新冠肺炎疫情因應措施</div>
-                        <div class="news_date">2020.9.15</div>
-                   </div>
-                   <div class="icon fas fa-minus-circle"></div>
-              </div>
-              <div class="news_info">
-                   <div class="img"><img src="/img/news_covid.jpg" alt=""></div>
-                   <div class="text">
-                        <p>體溫測量
-                             實施紅外線體溫量測儀進行體溫監測。若體溫過高則使用非接觸式體溫計重測，若高於攝氏37.5度則得拒絕入館。
-                             消毒對策
-                             遊客入館前需消毒手部並配戴口罩
-                             觸摸頻率高的地方(如樓梯、電扶梯的扶手、電梯按鈕、化粧室等)每2小時消毒清潔一次。
-                             入口處及館內複數重點處會設置消毒液提供遊客使用。(如電梯前、各樓層化粧室、館內Cafe、紀念品店、哺乳室、救護中心等)
-                             入館管制
-                             導入時段性入館措施，以便讓遊客確保適當之社交距離。關於每日、每時段的入場上限人數，將遵循開幕時的「防疫新生活運動」之規定。
-                        </p>
-                   </div>
-              </div>
-
-              <div class="news_list">
-                   <div class="news">
-                        <div class="news_title">小企鵝平安誕生惹~</div>
-                        <div class="news_date">2020.9.02</div>
-                   </div>
-                   <div class="icon fas fa-minus-circle"></div>
-              </div>
-              <div class="news_info">
-                   <div class="img"><img src="/img/news_penguin_born.jpg" alt=""></div>
-                   <div class="text">
-                        <p>
-                             企鵝仙女乾媽們說，非常驚喜也感到很意外，蒲公英(母)跟三葉草(父)誕下新生命，小企鵝於2020年6月22日出生，體重100公克，出生兩個月之後體重已經到了3.65公斤。
-                             據乾媽的觀察表示，小企鵝應該是男生，也是一個非常有膽量的好奇寶寶，第一天下水隔天就跑到對面的水域去玩耍，父母親目前都還未真的到對面去，做到了連成年企鵝都很難做到的事情。
-                        </p>
-                   </div>
-              </div>
+             @foreach ($news_ch_list as $news_ch)
+             <div class="news_list">
+                <div class="news">
+                     <div class="news_title">{{$news_ch->title}}</div>
+                     <div class="news_date">{{$news_ch->date}}</div>
+                </div>
+                <div class="icon fas fa-minus-circle"></div>
+           </div>
+           <div class="news_info">
+                <div class="img"><img src="{{$news_ch->image}}" alt=""></div>
+                <div class="text">
+                    {!!$news_ch->info!!}
+                </div>
+           </div>
+             @endforeach
          </div>
 
          <div id="activities" class="content_group">
@@ -110,7 +55,7 @@
                         <div class="swiper-slide">
                              <p><b class="event_title">當季特展</b><br>海洋因塑（素）聯合展</br><b
                                        class="event_date">2020.10.01</b></p>
-                             <div class="img"><img src="/img/events_plastic.png" alt=""></div>
+                             <div class="img"><img src="/img/events_plastic.jpg" alt=""></div>
                         </div>
                         <div class="swiper-slide">
                              <p><b class="event_title">當季特展</b><br>海洋生態攝影巡迴展</br><b

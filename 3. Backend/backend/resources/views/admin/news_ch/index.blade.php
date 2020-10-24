@@ -39,7 +39,7 @@
             <td>{{$news_ch->created_at}}</td>
         <td>
             <a href="news_ch/edit/{{$news_ch->id}}" class="btn btn-sm btn-primary">編輯</a>
-            <button class="btn btn-danger btn-sm btn-delete" data-newsid="{{$news_ch->id}}">刪除</button>
+            <button class="btn btn-danger btn-sm btn-delete" data-newschid="{{$news_ch->id}}">刪除</button>
             {{-- <a id="delete" href="news/destroy/{{$news->id}}" class="btn btn-sm btn-danger">刪除</a> --}}
         </td>
         </tr>
@@ -81,10 +81,10 @@
     });
 
         $('#example').on("click", ".btn-delete", function(){
-            var product_id = this.dataset.productid;
+            var news_ch_id = this.dataset.newschid;
             var r = confirm("你確定要刪除此筆資料?");
             if (r == true) {
-                window.location.href = `/admin/product/destroy/${product_id}`
+                window.location.href = `/admin/news_ch/destroy/${news_ch_id}`
             }
         });
             } );

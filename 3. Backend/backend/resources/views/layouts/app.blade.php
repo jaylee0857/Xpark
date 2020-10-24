@@ -37,7 +37,7 @@
                                   新聞報導管理
                                 </button>
                                 <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                                  <a class="dropdown-item" href="admin/news_ch">中文</a>
+                                  <a class="dropdown-item" href="/admin/news_ch">中文</a>
                                   <a class="dropdown-item" href="#">英文</a>
                                 </div>
                               </div>
@@ -48,7 +48,7 @@
                                   最新活動管理
                                 </button>
                                 <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                                  <a class="dropdown-item" href="#">中文</a>
+                                  <a class="dropdown-item" href="/admin/events_ch">中文</a>
                                   <a class="dropdown-item" href="#">英文</a>
                                 </div>
                               </div>
