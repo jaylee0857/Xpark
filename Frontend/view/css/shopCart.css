@@ -18,9 +18,8 @@
   display: -ms-flexbox;
   display: flex;
   cursor: pointer;
-  padding: 100px;
   position: absolute;
-  top: 23%;
+  top: 220px;
   left: 15%;
   font-weight: 600;
 }
