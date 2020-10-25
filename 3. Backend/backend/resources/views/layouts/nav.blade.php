@@ -24,7 +24,7 @@
             </li>
             <li><a href="/tour_0"><img class="bubble" src="svg/bubble.gif" alt="">館內介紹</a></li>
             <li><a href="/life"><img class="bubble" src="svg/bubble.gif" alt="">動物介紹</a></li>
-            <li><a href="#"><img class="bubble" src="svg/bubble.gif" alt="">購買票券 </a></li>
+            <li><a href="/booking"><img class="bubble" src="svg/bubble.gif" alt="">購買票券 </a></li>
             <li><a href="/shopCart"><img class="bubble" src="svg/bubble.gif" alt="">紀念品店</a></li>
             <li><a href="/FAQ"><img class="bubble" src="svg/bubble.gif" alt="">常見問題</a></li>
             <li><a href="#">CH/</a><a href="">EN</a></li>

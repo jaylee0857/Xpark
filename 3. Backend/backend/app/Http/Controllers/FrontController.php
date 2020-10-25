@@ -42,7 +42,7 @@ class FrontController extends Controller
     {
         return view('front/shopCart');
     }
-    
+
     public function whats_on()
     {
         $news_ch_list = Ch_News::orderBy('sort', 'asc')->take(4)->get();
@@ -57,6 +57,6 @@ class FrontController extends Controller
 
     public function booking()
     {
-        return view('front.booking');
+        return view('front/booking');
     }
 }
