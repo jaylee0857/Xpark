@@ -62,6 +62,6 @@ class FrontController extends Controller
 
     public function booking()
     {
-        return view('front.booking');
+        return view('front/booking');
     }
 }
