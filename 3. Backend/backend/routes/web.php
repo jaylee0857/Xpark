@@ -12,6 +12,7 @@
 */
 
 Route::get('/', 'FrontController@index'); //首頁
+Route::get('/en', 'FrontController@indexEn'); //首頁英文
 Route::get('/tour_0', 'FrontController@tour_0'); //館內導覽
 Route::get('/tour_F', 'FrontController@tour_F'); //樓層簡介
 Route::get('/life', 'FrontController@life'); //動物介紹

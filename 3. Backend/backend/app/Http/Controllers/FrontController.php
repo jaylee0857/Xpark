@@ -18,6 +18,11 @@ class FrontController extends Controller
         return view('front/index');
     }
 
+    public function indexEn()
+    {
+        return view('front/index');
+    }
+
     public function tour_0()
     {
         return view('front/tour_0');
@@ -42,7 +47,7 @@ class FrontController extends Controller
     {
         return view('front/shopCart');
     }
-    
+
     public function whats_on()
     {
         $news_ch_list = Ch_News::orderBy('sort', 'asc')->take(4)->get();

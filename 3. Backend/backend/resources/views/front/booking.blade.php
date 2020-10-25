@@ -276,15 +276,27 @@
 <div id="nav">
     <i class="bars fas fa-bars"></i>
     <ul class="phoneVersion">
-        <li><a href="#"><img class="bubble" src="svg/bubble.svg" alt="">最新消息</a></li>
-        <li><a href="#"><img class="bubble" src="svg/bubble.svg" alt="">館內介紹</a></li>
-        <li><a href="#"><img class="bubble" src="svg/bubble.svg" alt="">購買票券 </a></li>
-        <li><a href="#"><img class="bubble" src="svg/bubble.svg" alt="">紀念品店</a></li>
-        <li><a href="#"><img class="bubble" src="svg/bubble.svg" alt="">常見問題</a></li>
-        <li><a href="#">CH/</a><a href="">EN</a></li>
         <li>
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="/whats_on">
+                <img class="bubble" src="svg/bubble.gif" alt="">最新消息
+            </a>
+        </li>
+        <li><a href="/tour_0"><img class="bubble" src="svg/bubble.gif" alt="">館內介紹</a></li>
+        <li><a href="/life"><img class="bubble" src="svg/bubble.gif" alt="">動物介紹</a></li>
+        <li><a href="/booking"><img class="bubble" src="svg/bubble.gif" alt="">購買票券 </a></li>
+        <li><a href="/shopCart"><img class="bubble" src="svg/bubble.gif" alt="">紀念品店</a></li>
+        <li><a href="/FAQ"><img class="bubble" src="svg/bubble.gif" alt="">常見問題</a></li>
+        <li>
+            <a href="#">CH/</a>
+            <a href="">EN</a>
+        </li>
+        <li>
+            <a href="https://www.facebook.com/Xparkaquarium/">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/xpark_aquarium/">
+                <i class="fab fa-instagram"></i>
+            </a>
         </li>
     </ul>
 </div>
