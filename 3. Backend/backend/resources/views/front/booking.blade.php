@@ -6,6 +6,7 @@
 
 @section('name')
     <div id="app">
+         <title>index</title>
         <section>
             <h1>購買票券</h1>
             <div class="container d-flex ">

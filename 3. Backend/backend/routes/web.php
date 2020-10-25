@@ -23,7 +23,7 @@ Route::get('/shopCart', 'FrontController@shopCart'); //紀念品店
 Route::get('/whats_on', 'FrontController@whats_on'); //最新消息中文頁
 Route::get('/whats_on_en', 'FrontController@whats_on_en'); //最新消息英文頁
 
-Route::get('/test', 'FrontController@booking');
+Route::get('/booking', 'FrontController@booking');
 
 Auth::routes(['register' => false]);
 
